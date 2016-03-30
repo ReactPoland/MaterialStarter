@@ -4,6 +4,7 @@ import { RaisedButton, Paper } from 'material-ui';
 import { DefaultInput } from './DefaultInput';
 import axios from 'axios';
 import UnderwritingList from './UnderwritingList.js';
+import styles from '../styles.js';
 
 
 
@@ -21,6 +22,7 @@ export class Form extends React.Component {
   }
 
   render() {
+    let ageInputsStyle = {...styles.ageInputsStyle};
     let JSXtoReturn = (
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
@@ -32,6 +34,16 @@ export class Form extends React.Component {
           <DefaultInput 
             name='title' title='Amount' required />
           <UnderwritingList />
+          <DefaultInput
+            style={ageInputsStyle}
+            name='href' 
+            title='Actual age' 
+            required />
+          <DefaultInput 
+            style={ageInputsStyle}
+            name='href' 
+            title='Nearest age' 
+            required />
           <div style={{marginTop: 24}}>
             <RaisedButton
               secondary={true}

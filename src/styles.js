@@ -4,5 +4,6 @@ export default {
 	formMaxWidth: {maxWidth: '90%'},
 	formMargin: {margin: '0 auto'},
 	componentMarginTop: { marginTop: 20},
-	menuTopMargin: {marginTop: 40}
+	menuTopMargin: {marginTop: 40},
+	ageInputsStyle: {width: '30%'}
 };
