@@ -20,7 +20,7 @@ export default class RadioButtonExampleSimple extends React.Component {
           <RadioButton
             value="not_light"
             label="Female"
-            style={styles.radioButton}
+            style={sexSwitchesRadioButton}
           />
         </RadioButtonGroup>
 
