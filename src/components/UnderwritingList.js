@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from 'material-ui/lib/menus/menu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-
+import styles from '../styles.js';
 
 export default class UnderwritingList extends React.Component  {
 	constructor(props) {
@@ -13,11 +13,10 @@ export default class UnderwritingList extends React.Component  {
 
   }
 	render() {
-		const style = {
-		};
+		let menuSimpleStyling = {...styles.menuTopMargin };
 		return (
 			<div>
-			    <Menu style={style}>
+			    <Menu style={menuSimpleStyling}>
 			      <MenuItem primaryText="Super Preferred" />
 			      <MenuItem primaryText="Preferred" />
 			      <MenuItem primaryText="Standard" />
