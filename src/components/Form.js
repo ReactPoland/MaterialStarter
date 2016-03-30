@@ -8,6 +8,7 @@ import TypeMenu from './TypeMenu.js';
 import ProvinceDropdownMenu from './ProvinceDropdownMenu.js';
 import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
+import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
 
 
@@ -51,12 +52,14 @@ export class Form extends React.Component {
           <TypeMenu />
           <CheckBox />
           <ProvinceDropdownMenu />
+          <ResetButton />
           <div style={{marginTop: 24}}>
             <RaisedButton
               secondary={true}
               type="submit"
               style={{margin: '0 auto', display: 'block', width: 150}}
               label={'Submit form'} />
+            
           </div>
         </Paper>
       </Formsy.Form>
