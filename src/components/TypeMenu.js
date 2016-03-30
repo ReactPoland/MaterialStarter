@@ -17,7 +17,7 @@ export default class TypeDropdownMenu extends React.Component {
   render() {
   	let menuSimpleStyling = {...styles.menuTopMargin };
     return (
-      <DropDownMenu value={this.state.value} onChange={this.handleChange} style={menuSimpleStyling}>
+      <DropDownMenu value={this.state.value} onChange={this.handleChange} >
         <MenuItem value={1} primaryText="Term 10"/>
         <MenuItem value={2} primaryText="Term 15"/>
         <MenuItem value={3} primaryText="Term 20"/>

@@ -17,7 +17,7 @@ export default class ProvinceDropdownMenu extends React.Component {
   render() {
   	let menuSimpleStyling = {...styles.menuTopMargin };
     return (
-      <DropDownMenu value={this.state.value} onChange={this.handleChange} style={menuSimpleStyling}>
+      <DropDownMenu value={this.state.value} onChange={this.handleChange} >
         <MenuItem value={1} primaryText="All provinces"/>
         <MenuItem value={2} primaryText="Alberta"/>
         <MenuItem value={3} primaryText="Quebec"/>

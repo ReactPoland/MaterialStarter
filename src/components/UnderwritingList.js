@@ -17,7 +17,7 @@ export default class UnderwritingDropdownMenu extends React.Component {
   render() {
   	let menuSimpleStyling = {...styles.menuTopMargin };
     return (
-      <DropDownMenu value={this.state.value} onChange={this.handleChange} style={menuSimpleStyling}>
+      <DropDownMenu value={this.state.value} onChange={this.handleChange} >
         <MenuItem value={1} primaryText="Super Preferred"/>
         <MenuItem value={2} primaryText="Preferred"/>
         <MenuItem value={3} primaryText="Standard"/>

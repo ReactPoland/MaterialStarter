@@ -37,7 +37,9 @@ export class Form extends React.Component {
             required />
           <DefaultInput 
             name='title' title='Amount' required />
+          <h3>Select type of insurance:</h3>
           <UnderwritingList />
+          <h3>Enter age:</h3>
           <DefaultInput
             style={ageInputsStyle}
             name='href' 
@@ -48,9 +50,12 @@ export class Form extends React.Component {
             name='href' 
             title='Nearest age' 
             required />
+          <h3>Select Sex:</h3>
           <SexSwitches />
+          <h3>Choose Type:</h3>
           <TypeMenu />
           <CheckBox />
+          <h3>Select Province:</h3>
           <ProvinceDropdownMenu />
           <ResetButton />
           <div style={{marginTop: 24}}>
