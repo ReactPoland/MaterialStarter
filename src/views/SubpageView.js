@@ -15,7 +15,7 @@ export default class SubpageView extends React.Component {
   return (
     <div style={{marginTop: 20}}>
       <div style={{maxWidth: 450, margin: '0 auto'}}>
-        <Form />
+        <Form onSubmit={(model) => alert(JSON.stringify(model, null, 4))} />
       </div>
     </div>);
 

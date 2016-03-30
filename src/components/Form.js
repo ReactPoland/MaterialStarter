@@ -15,6 +15,7 @@ export class Form extends React.Component {
 
   _submit(model) {
     console.info("data submited", model);
+    this.props.onSubmit(model);
 
   }
 
