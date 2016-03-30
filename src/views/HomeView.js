@@ -4,7 +4,7 @@ import {
   Icon_Flag_BG,
   Icon_Flag_US
 } from 'material-ui-country-flags';
-
+import styles from '../styles';
 
 var mock = {
 	
@@ -27,11 +27,11 @@ export default class HomeView extends React.Component {
 
 
   let rowsJSX = mock.websitesList.map((item, index) => {
-    let tableStyle={display: "inline-block"};
+    let exampleStylesSprad = {...styles.tableStyle, ...styles.fontSizeStyle};
 
     return (<TableRow key={index}>
               <TableRowColumn>
-                <div style={tableStyle}>
+                <div style={exampleStylesSprad}>
                 <a href={item.href} target="_blank">
                   <FlatButton
                     backgroundColor="#ffffff"
