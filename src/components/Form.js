@@ -4,6 +4,7 @@ import { RaisedButton, Paper } from 'material-ui';
 import { DefaultInput } from './DefaultInput';
 import axios from 'axios';
 import UnderwritingList from './UnderwritingList.js';
+import TypeMenu from './TypeMenu.js';
 import SexSwitches from './SexSwitches.js';
 import styles from '../styles.js';
 
@@ -45,6 +46,7 @@ export class Form extends React.Component {
             title='Nearest age' 
             required />
           <SexSwitches />
+          <TypeMenu />
           <div style={{marginTop: 24}}>
             <RaisedButton
               secondary={true}
