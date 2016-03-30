@@ -9,5 +9,8 @@ export default {
 	sexSwitchesBlock: {maxWidth: 250},
 	sexSwitchesRadioButton: { marginBottom: 16},
 	sexSwitchesButtonsMarginTop: {marginTop: 40},
-	formHeading: { textAlign: 'center'}
+	formHeading: { textAlign: 'center'},
+	resetButtonMargin: {margin: '0 auto'},
+	resetButtonWidth: {display: 'block'},
+	resetButtonDisplay: {width: 150}
 };

@@ -1,14 +1,15 @@
 import React from 'react';
 import RaisedButton from 'material-ui/lib/raised-button';
+import styles from '../styles.js';
 
 
 export default class ResetButton extends React.Component {
 
   render() {
-
+  	let resetButtonStyling = {...styles.resetButtonMargin, ...styles.resetButtonWidth, ...styles.resetButtonDisplay};
     return (
       <div>
-	    <RaisedButton label="Reset" secondary={true} style={{margin: '0 auto',display: 'block', width: 150}} />
+	    <RaisedButton label="Reset" secondary={true} style={resetButtonStyling} />
 	  </div>
     );
   }
