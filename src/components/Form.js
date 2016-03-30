@@ -5,7 +5,9 @@ import { DefaultInput } from './DefaultInput';
 import axios from 'axios';
 import UnderwritingList from './UnderwritingList.js';
 import TypeMenu from './TypeMenu.js';
+import ProvinceDropdownMenu from './ProvinceDropdownMenu.js';
 import SexSwitches from './SexSwitches.js';
+import CheckBox from './Checkbox.js';
 import styles from '../styles.js';
 
 
@@ -47,6 +49,8 @@ export class Form extends React.Component {
             required />
           <SexSwitches />
           <TypeMenu />
+          <CheckBox />
+          <ProvinceDropdownMenu />
           <div style={{marginTop: 24}}>
             <RaisedButton
               secondary={true}
