@@ -26,7 +26,7 @@ export default class HomeView extends React.Component {
   render () {
 
 
-  let rowsJSX = mock.websitesList.map((item, index) => {
+    let rowsJSX = mock.websitesList.map((item, index) => {
     let exampleStylesSpread = {...styles.tableStyle, ...styles.fontSizeStyle};
 
     return (<TableRow key={index}>

@@ -5,19 +5,20 @@ import {
   Icon_Flag_US
 } from 'material-ui-country-flags';
 import { Form } from 'components/Form.js';
+import styles from '../styles.js';
 
 
 
 export default class SubpageView extends React.Component {
   render () {
-
-
-  return (
-    <div style={{marginTop: 20}}>
-      <div style={{maxWidth: '90%', margin: '0 auto'}}>
-        <Form onSubmit={(model) => alert(JSON.stringify(model, null, 4))} />
-      </div>
-    </div>);
+    let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
+    let formComponentMarginTop = {...styles.componentMarginTop};
+    return (
+      <div style={formComponentMarginTop}>
+        <div style={formMaxWidthAndMargins}>
+          <Form onSubmit={(model) => alert(JSON.stringify(model, null, 4))} />
+        </div>
+      </div>);
 
   }
 }
