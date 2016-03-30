@@ -27,11 +27,11 @@ export default class HomeView extends React.Component {
 
 
   let rowsJSX = mock.websitesList.map((item, index) => {
-    let exampleStylesSprad = {...styles.tableStyle, ...styles.fontSizeStyle};
+    let exampleStylesSpread = {...styles.tableStyle, ...styles.fontSizeStyle};
 
     return (<TableRow key={index}>
               <TableRowColumn>
-                <div style={exampleStylesSprad}>
+                <div style={exampleStylesSpread}>
                 <a href={item.href} target="_blank">
                   <FlatButton
                     backgroundColor="#ffffff"
