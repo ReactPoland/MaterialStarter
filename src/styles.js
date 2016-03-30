@@ -8,5 +8,6 @@ export default {
 	ageInputsStyle: {width: '30%'},
 	sexSwitchesBlock: {maxWidth: 250},
 	sexSwitchesRadioButton: { marginBottom: 16},
-	sexSwitchesButtonsMarginTop: {marginTop: 40}
+	sexSwitchesButtonsMarginTop: {marginTop: 40},
+	formHeading: { textAlign: 'center'}
 };
