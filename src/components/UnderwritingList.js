@@ -7,7 +7,7 @@ export default class UnderwritingDropdownMenu extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: 2};
+    this.state = {value: 4};
 
     this.handleChange = this.handleChange.bind(this);
   }

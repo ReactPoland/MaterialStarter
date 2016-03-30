@@ -4,6 +4,7 @@ import { RaisedButton, Paper } from 'material-ui';
 import { DefaultInput } from './DefaultInput';
 import axios from 'axios';
 import UnderwritingList from './UnderwritingList.js';
+import SexSwitches from './SexSwitches.js';
 import styles from '../styles.js';
 
 
@@ -26,7 +27,6 @@ export class Form extends React.Component {
     let JSXtoReturn = (
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          <h3>First input</h3>
           <DefaultInput 
             name='href' 
             title='Client 1' 
@@ -44,6 +44,7 @@ export class Form extends React.Component {
             name='href' 
             title='Nearest age' 
             required />
+          <SexSwitches />
           <div style={{marginTop: 24}}>
             <RaisedButton
               secondary={true}
