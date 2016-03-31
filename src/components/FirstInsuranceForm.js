@@ -12,6 +12,7 @@ import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
 import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 import EditIcon from 'material-ui/lib/svg-icons/image/edit';
+import ClearIcon from 'material-ui/lib/svg-icons/content/clear';
 
 
 export class Form extends React.Component {
@@ -38,6 +39,7 @@ export class Form extends React.Component {
           <h1 style={formHeading}>First Insurance Form</h1>
           <div className="row" style={marginTopForty}>
             <Accessability />
+            <ClearIcon />
             <DefaultInput
               className="col-xs-12
                 col-sm-5
@@ -47,6 +49,7 @@ export class Form extends React.Component {
               title='Client 1' 
               required />
            <EditIcon />
+           <ClearIcon />
             <DefaultInput 
               className="col-xs-12
                 col-sm-5
@@ -56,6 +59,7 @@ export class Form extends React.Component {
           </div>
           <div className="row" style={marginTopForty}>
             <EditIcon />
+            <ClearIcon />
             <DefaultInput
               className="col-xs-12
                   col-sm-5
@@ -66,6 +70,7 @@ export class Form extends React.Component {
               title='Actual age' 
               required />
             <EditIcon />
+            <ClearIcon />
             <DefaultInput 
               className="col-xs-12
                   col-sm-5
