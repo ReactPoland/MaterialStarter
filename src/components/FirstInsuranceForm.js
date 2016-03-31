@@ -37,38 +37,45 @@ export class Form extends React.Component {
             <FaceIcon  />
             <DefaultInput
               className="col-xs-12
-                col-sm-4
-                col-md-4
-                col-lg-4"
+                col-sm-5
+                col-md-5
+                col-lg-5"
               name='href' 
               title='Client 1' 
               required />
            
-          
+            <FaceIcon  />
             <DefaultInput 
               className="col-xs-12
-                col-sm-4
-                col-md-4
-                col-lg-4"
+                col-sm-5
+                col-md-5
+                col-lg-5"
               name='title' title='Amount' required />
           </div>
           <h3>Select type of insurance:</h3>
           <UnderwritingList />
           <h3>Enter age:</h3>
-          <DefaultInput
-            className="col-xs-12
-                col-sm-8
-                col-md-6
-                col-lg-4"
+          <div className="row">
+            <FaceIcon  />
+            <DefaultInput
+              className="col-xs-12
+                  col-sm-5
+                  col-md-5
+                  col-lg-5"
 
-            name='href' 
-            title='Actual age' 
-            required />
-          <DefaultInput 
-            style={ageInputsStyle}
-            name='href' 
-            title='Nearest age' 
-            required />
+              name='href' 
+              title='Actual age' 
+              required />
+            <FaceIcon  />
+            <DefaultInput 
+              className="col-xs-12
+                  col-sm-5
+                  col-md-5
+                  col-lg-5"
+              name='href' 
+              title='Nearest age' 
+              required />
+          </div>
           <h3>Select Sex:</h3>
           <SexSwitches />
           <h3>Choose Type:</h3>
