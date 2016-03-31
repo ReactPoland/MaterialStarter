@@ -24,7 +24,7 @@ export const DefaultInput = React.createClass({
     const errorMessage = this.getErrorMessage();
 
     return (
-      <div>
+      <div className={this.props.className}>
         <TextField
           floatingLabelText={this.props.defaultValue ? '' : this.props.title}
           floatingLabelStyle={{fontWeight: 300}}
