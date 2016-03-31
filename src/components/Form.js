@@ -10,7 +10,7 @@ import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
-
+import SvgIconExampleSimple from '../my-react-icons/ExampleIcon.js';
 
 
 export class Form extends React.Component {
@@ -31,6 +31,7 @@ export class Form extends React.Component {
     let JSXtoReturn = (
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
+          <SvgIconExampleSimple />
           <DefaultInput 
             name='href' 
             title='Client 1' 
