@@ -29,11 +29,13 @@ export class Form extends React.Component {
 
   render() {
     let ageInputsStyle = {...styles.ageInputsStyle};
+    let formHeading = { ...styles.formHeading };
+    let marginTopForty ={...styles.menuTopMargin};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          
+          <h1 style={formHeading}>First Insurance Form</h1>
           <div className="row">
             <Accessability />
             <DefaultInput
@@ -52,9 +54,6 @@ export class Form extends React.Component {
                 col-lg-5"
               name='title' title='Amount' required />
           </div>
-          <h3>Select type of insurance:</h3>
-          <UnderwritingList />
-          <h3>Enter age:</h3>
           <div className="row">
             <EditIcon />
             <DefaultInput
@@ -76,21 +75,24 @@ export class Form extends React.Component {
               title='Nearest age' 
               required />
           </div>
-          <h3>Select Sex:</h3>
-          <SexSwitches />
-          <h3>Choose Type:</h3>
+          <div className="row">
+          <UnderwritingList />
           <TypeMenu />
-          <CheckBox />
-          <h3>Select Province:</h3>
           <ProvinceDropdownMenu />
+          
+          
+          </div>
+          <SexSwitches />
+          <CheckBox />
+          <div className="row">
           <ResetButton />
-          <div style={{marginTop: 24}}>
-            <RaisedButton
-              secondary={true}
-              type="submit"
-              style={{margin: '0 auto', display: 'block', width: 150}}
-              label={'Submit form'} />
-            
+          
+          <RaisedButton
+            secondary={true}
+            type="submit"
+            style={{float:'right', width: 150}}
+            label={'Submit form'} />
+          
           </div>
         </Paper>
       </Formsy.Form>

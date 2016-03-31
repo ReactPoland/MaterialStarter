@@ -10,7 +10,7 @@ export default class RadioButtonExampleSimple extends React.Component {
     let sexSwitchesRadioButton = {...styles.sexSwitchesRadioButton};
     let sexSwitchesButtonsMarginTop = {...styles.sexSwitchesButtonsMarginTop};
     return (
-      <div>
+      <div style={sexSwitchesButtonsMarginTop}>
         <RadioButtonGroup name="shipSpeed" defaultSelected="not_light"  >
           <RadioButton
             value="light"

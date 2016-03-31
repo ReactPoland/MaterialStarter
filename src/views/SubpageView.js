@@ -14,10 +14,10 @@ export default class SubpageView extends React.Component {
   render () {
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
-    let formHeading = { ...styles.formHeading };
+    
     return (
       <div style={formComponentMarginTop}>
-        <h1 style={formHeading}>First Insurance Form</h1>
+        
         <div style={formMaxWidthAndMargins}>
           <Form onSubmit={(model) => alert(JSON.stringify(model, null, 4))} />
         </div>
