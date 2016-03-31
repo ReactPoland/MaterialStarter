@@ -3,9 +3,9 @@ import Face from 'material-ui/lib/svg-icons/action/face';
 import Colors from 'material-ui/lib/styles/colors';
 
 
-const SvgIconExampleIcons = () => (
+const SvgIconExampleIcons = ( ) => (
   <div>
-    <Face  />
+    <Face />
   </div>
 );
 

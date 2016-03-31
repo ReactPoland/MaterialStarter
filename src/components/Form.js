@@ -32,14 +32,14 @@ export class Form extends React.Component {
       
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          <FaceIcon />
-          <div className="row">
           
+          <div className="row">
+            <FaceIcon  />
             <DefaultInput
               className="col-xs-12
-                col-sm-6
-                col-md-5
-                col-lg-5"
+                col-sm-4
+                col-md-4
+                col-lg-4"
               name='href' 
               title='Client 1' 
               required />
@@ -47,9 +47,9 @@ export class Form extends React.Component {
           
             <DefaultInput 
               className="col-xs-12
-                col-sm-6
-                col-md-5
-                col-lg-5"
+                col-sm-4
+                col-md-4
+                col-lg-4"
               name='title' title='Amount' required />
           </div>
           <h3>Select type of insurance:</h3>
