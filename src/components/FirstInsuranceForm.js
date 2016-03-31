@@ -10,6 +10,8 @@ import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
+import Accessability from 'material-ui/lib/svg-icons/action/account-box';
+import EditIcon from 'material-ui/lib/svg-icons/image/edit';
 
 
 export class Form extends React.Component {
@@ -33,6 +35,7 @@ export class Form extends React.Component {
         <Paper zDepth={1} style={{padding: 32}}>
           
           <div className="row">
+            <Accessability />
             <DefaultInput
               className="col-xs-12
                 col-sm-5
@@ -41,7 +44,7 @@ export class Form extends React.Component {
               name='href' 
               title='Client 1' 
               required />
-           
+           <EditIcon />
             <DefaultInput 
               className="col-xs-12
                 col-sm-5
@@ -53,6 +56,7 @@ export class Form extends React.Component {
           <UnderwritingList />
           <h3>Enter age:</h3>
           <div className="row">
+            <EditIcon />
             <DefaultInput
               className="col-xs-12
                   col-sm-5
@@ -62,6 +66,7 @@ export class Form extends React.Component {
               name='href' 
               title='Actual age' 
               required />
+            <EditIcon />
             <DefaultInput 
               className="col-xs-12
                   col-sm-5
