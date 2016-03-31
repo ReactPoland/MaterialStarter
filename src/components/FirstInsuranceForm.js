@@ -10,7 +10,6 @@ import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
-import FaceIcon from '../my-react-icons/FaceIcon.js';
 
 
 export class Form extends React.Component {
@@ -34,7 +33,6 @@ export class Form extends React.Component {
         <Paper zDepth={1} style={{padding: 32}}>
           
           <div className="row">
-            <FaceIcon  />
             <DefaultInput
               className="col-xs-12
                 col-sm-5
@@ -44,7 +42,6 @@ export class Form extends React.Component {
               title='Client 1' 
               required />
            
-            <FaceIcon  />
             <DefaultInput 
               className="col-xs-12
                 col-sm-5
@@ -56,7 +53,6 @@ export class Form extends React.Component {
           <UnderwritingList />
           <h3>Enter age:</h3>
           <div className="row">
-            <FaceIcon  />
             <DefaultInput
               className="col-xs-12
                   col-sm-5
@@ -66,7 +62,6 @@ export class Form extends React.Component {
               name='href' 
               title='Actual age' 
               required />
-            <FaceIcon  />
             <DefaultInput 
               className="col-xs-12
                   col-sm-5
