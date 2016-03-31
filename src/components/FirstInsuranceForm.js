@@ -36,7 +36,7 @@ export class Form extends React.Component {
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
           <h1 style={formHeading}>First Insurance Form</h1>
-          <div className="row">
+          <div className="row" style={marginTopForty}>
             <Accessability />
             <DefaultInput
               className="col-xs-12
@@ -54,7 +54,7 @@ export class Form extends React.Component {
                 col-lg-5"
               name='title' title='Amount' required />
           </div>
-          <div className="row">
+          <div className="row" style={marginTopForty}>
             <EditIcon />
             <DefaultInput
               className="col-xs-12
@@ -75,7 +75,7 @@ export class Form extends React.Component {
               title='Nearest age' 
               required />
           </div>
-          <div className="row">
+          <div className="row" style={marginTopForty}>
           <UnderwritingList />
           <TypeMenu />
           <ProvinceDropdownMenu />
@@ -84,7 +84,7 @@ export class Form extends React.Component {
           </div>
           <SexSwitches />
           <CheckBox />
-          <div className="row">
+          <div className="row" style={marginTopForty}>
           <ResetButton />
           
           <RaisedButton
