@@ -69,6 +69,7 @@
     "falcor-express": "^0.1.2",
     "falcor-router": "^0.2.12",
     "file-loader": "^0.8.4",
+    "flexboxgrid": "^6.3.0",
     "html-webpack-plugin": "^1.6.1",
     "isparta-loader": "^1.0.0",
     "karma": "^0.13.8",
