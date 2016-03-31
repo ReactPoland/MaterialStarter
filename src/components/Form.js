@@ -10,7 +10,7 @@ import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
-import SvgIconExampleSimple from '../my-react-icons/ExampleIcon.js';
+import FaceIcon from '../my-react-icons/FaceIcon.js';
 
 
 export class Form extends React.Component {
@@ -29,20 +29,38 @@ export class Form extends React.Component {
   render() {
     let ageInputsStyle = {...styles.ageInputsStyle};
     let JSXtoReturn = (
+      
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          <SvgIconExampleSimple />
-          <DefaultInput 
-            name='href' 
-            title='Client 1' 
-            required />
-          <DefaultInput 
-            name='title' title='Amount' required />
+          <FaceIcon />
+          <div className="row">
+          
+            <DefaultInput
+              className="col-xs-12
+                col-sm-6
+                col-md-5
+                col-lg-5"
+              name='href' 
+              title='Client 1' 
+              required />
+           
+          
+            <DefaultInput 
+              className="col-xs-12
+                col-sm-6
+                col-md-5
+                col-lg-5"
+              name='title' title='Amount' required />
+          </div>
           <h3>Select type of insurance:</h3>
           <UnderwritingList />
           <h3>Enter age:</h3>
           <DefaultInput
-            style={ageInputsStyle}
+            className="col-xs-12
+                col-sm-8
+                col-md-6
+                col-lg-4"
+
             name='href' 
             title='Actual age' 
             required />
@@ -69,6 +87,7 @@ export class Form extends React.Component {
           </div>
         </Paper>
       </Formsy.Form>
+      
     );
 
     return JSXtoReturn;
