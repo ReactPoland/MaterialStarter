@@ -4,7 +4,7 @@ import {
   Icon_Flag_BG,
   Icon_Flag_US
 } from 'material-ui-country-flags';
-import { Form } from 'components/Form.js';
+import { Form } from 'components/FirstInsuranceForm.js';
 import styles from '../styles.js';
 
 
