@@ -36,25 +36,22 @@ export class Form extends React.Component {
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
     let formIconsTopMargin ={...styles.formIconsTopMargin};
-    let centerSelectableRow = {...styles.centerSelectableRow};
-    let centerSumbitButtonsRow ={...styles.centerSumbitButtonsRow};
     let raisedButtonFloatAndWidth ={ ...styles.raisedButtonFloatAndWidth};
     let inputsMarginLeft ={...styles.inputsMarginLeft, ...styles.menuTopMargin};
-    let ageInputsRow = {...styles.menuTopMargin, ...styles.ageInputsRowLeftMargin};
-    let ageInputLeftMargin = {...styles.ageInputLeftMargin};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
           <h1 style={formHeading}>First Insurance Form</h1>
-          <div className="row" style={marginTopForty}>
+          <div className="row center-lg center-md center-sm center-xs" style={marginTopForty}>
             <div>
-              <AccountBox style={formIconsTopMargin}/>
+              <AccountBox 
+              style={formIconsTopMargin}/>
             </div>
             
             <DefaultInput
-              className="col-xs-12
-                col-sm-11
+              className="col-xs-9
+                col-sm-10
                 col-md-11
                 col-lg-11"
               name='href' 
@@ -64,31 +61,31 @@ export class Form extends React.Component {
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
             </div>
-            <div className="row" style={marginTopForty}>
-            <div>
-              <AttachMoney style={formIconsTopMargin}/>
-            </div>
-           
-            <DefaultInput 
-              className="col-xs-12
-                col-sm-11
-                col-md-11
-                col-lg-11"
-              name='title' title='Amount' required />
+            <div className="row center-lg center-md center-sm center-xs" style={marginTopForty}>
               <div>
-                <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+                <AttachMoney style={formIconsTopMargin}/>
               </div>
-          </div>
-          <div className="row" style={ageInputsRow}>
+             
+              <DefaultInput 
+                className="col-xs-9
+                  col-sm-10
+                  col-md-11
+                  col-lg-11"
+                name='title' title='Amount' required />
+                <div>
+                  <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+                </div>
+            </div>
+          <div className="row center-lg center-md center-sm center-xs" >
             <div>
               <Info style={formIconsTopMargin}/>
             </div>
             
             <DefaultInput
 
-              className="col-xs-12
-                  col-sm-6
-                  col-md-3
+              className="col-xs-9
+                  col-sm-10
+                  col-md-6
                   col-lg-3"
 
               name='href' 
@@ -97,13 +94,13 @@ export class Form extends React.Component {
             <div>
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
-             <div style={ageInputLeftMargin}>
+             <div >
               <Hourglass style={formIconsTopMargin}/>
             </div>
             <DefaultInput 
-              className="col-xs-12
-                  col-sm-6
-                  col-md-3
+              className="col-xs-9
+                  col-sm-10
+                  col-md-6
                   col-lg-3"
               name='href' 
               title='Nearest age' 
@@ -112,7 +109,7 @@ export class Form extends React.Component {
                 <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
               </div>
           </div>
-          <div className="row" style={centerSelectableRow}>
+          <div className="row center-lg center-md center-sm center-xs" >
           <UnderwritingList />
           <TypeMenu />
           <ProvinceDropdownMenu />
@@ -121,7 +118,7 @@ export class Form extends React.Component {
           </div>
           <SexSwitches />
           <CheckBox />
-          <div className="row" style={centerSumbitButtonsRow}>
+          <div className="row center-lg center-md center-sm center-xs" >
           <ResetButton />
           
           <RaisedButton
