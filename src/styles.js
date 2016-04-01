@@ -15,5 +15,6 @@ export default {
 	resetButtonWidth: {display: 'block'},
 	resetButtonDisplay: {width: 150},
 	centerSelectableRow: {marginLeft: "20%", marginTop: 40 },
-	centerSumbitButtonsRow: {marginLeft: '35%', marginTop: 40}
+	centerSumbitButtonsRow: {marginLeft: '35%', marginTop: 40},
+	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5}
 };

@@ -36,6 +36,7 @@ export class Form extends React.Component {
     let formIconsTopMargin ={...styles.formIconsTopMargin};
     let centerSelectableRow = {...styles.centerSelectableRow};
     let centerSumbitButtonsRow ={...styles.centerSumbitButtonsRow};
+    let raisedButtonFloatAndWidth ={ ...styles.raisedButtonFloatAndWidth};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
@@ -118,7 +119,7 @@ export class Form extends React.Component {
           <RaisedButton
             secondary={true}
             type="submit"
-            style={{float:'right', width: 150}}
+            style={raisedButtonFloatAndWidth}
             label={'Submit form'} />
           
           </div>
