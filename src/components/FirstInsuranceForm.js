@@ -38,6 +38,8 @@ export class Form extends React.Component {
     let formIconsTopMargin ={...styles.formIconsTopMargin};
     let raisedButtonFloatAndWidth ={ ...styles.raisedButtonFloatAndWidth};
     let inputsMarginLeft ={...styles.inputsMarginLeft, ...styles.menuTopMargin};
+    let resetButtonStyling = {...styles.resetButtonMargin, ...styles.resetButtonWidth, ...styles.resetButtonDisplay};
+    let buttonsLeftMargin = { ...styles.inputsMarginLeft};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
@@ -121,14 +123,15 @@ export class Form extends React.Component {
           <SexSwitches />
           <CheckBox />
           <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
+          <div className="row center-lg center-md center-sm center-xs">
           <ResetButton />
           
           <RaisedButton
             secondary={true}
             type="submit"
-            style={raisedButtonFloatAndWidth}
+            style={resetButtonStyling}
             label={'Submit form'} />
-          
+          </div>
           </div>
         </Paper>
       </Formsy.Form>

@@ -17,4 +17,5 @@ export default {
 	raisedButtonFloatAndWidth: {float: 'right', width: 150},
 	inputsMarginLeft: {marginLeft: '5%'}
 
+
 };
