@@ -76,7 +76,7 @@ export class Form extends React.Component {
                   <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
                 </div>
             </div>
-          <div className="row center-lg center-md center-sm center-xs" >
+          <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
             <div>
               <Info style={formIconsTopMargin}/>
             </div>
@@ -109,7 +109,7 @@ export class Form extends React.Component {
                 <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
               </div>
           </div>
-          <div className="row center-lg center-md center-sm center-xs" >
+          <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
           <UnderwritingList />
           <TypeMenu />
           <ProvinceDropdownMenu />
