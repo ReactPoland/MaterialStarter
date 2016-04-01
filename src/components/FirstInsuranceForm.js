@@ -13,6 +13,7 @@ import styles from '../styles.js';
 import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 import EditIcon from 'material-ui/lib/svg-icons/image/edit';
 import ClearIcon from 'material-ui/lib/svg-icons/content/clear';
+import Colors from 'material-ui/lib/styles/colors';
 
 
 export class Form extends React.Component {
@@ -54,7 +55,7 @@ export class Form extends React.Component {
               title='Client 1' 
               required />
             <div>
-              <ClearIcon style={formIconsTopMargin}/>
+              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
             <div>
               <EditIcon style={formIconsTopMargin}/>
@@ -67,7 +68,7 @@ export class Form extends React.Component {
                 col-lg-5"
               name='title' title='Amount' required />
               <div>
-                <ClearIcon style={formIconsTopMargin}/>
+                <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
               </div>
           </div>
           <div className="row" style={marginTopForty}>
@@ -85,7 +86,7 @@ export class Form extends React.Component {
               title='Actual age' 
               required />
             <div>
-              <ClearIcon style={formIconsTopMargin}/>
+              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
              <div>
               <EditIcon style={formIconsTopMargin}/>
@@ -99,7 +100,7 @@ export class Form extends React.Component {
               title='Nearest age' 
               required />
               <div>
-                <ClearIcon style={formIconsTopMargin}/>
+                <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
               </div>
           </div>
           <div className="row" style={centerSelectableRow}>
