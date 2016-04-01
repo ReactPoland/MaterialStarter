@@ -13,5 +13,7 @@ export default {
 	formHeading: { textAlign: 'center'},
 	resetButtonMargin: {margin: '0 auto'},
 	resetButtonWidth: {display: 'block'},
-	resetButtonDisplay: {width: 150}
+	resetButtonDisplay: {width: 150},
+	centerSelectableRow: {marginLeft: "20%", marginTop: 40 },
+	centerSumbitButtonsRow: {marginLeft: '35%', marginTop: 40}
 };

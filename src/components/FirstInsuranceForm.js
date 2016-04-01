@@ -33,6 +33,8 @@ export class Form extends React.Component {
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
     let formIconsTopMargin ={...styles.formIconsTopMargin};
+    let centerSelectableRow = {...styles.centerSelectableRow};
+    let centerSumbitButtonsRow ={...styles.centerSumbitButtonsRow};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
@@ -100,7 +102,7 @@ export class Form extends React.Component {
                 <ClearIcon style={formIconsTopMargin}/>
               </div>
           </div>
-          <div className="row" style={marginTopForty}>
+          <div className="row" style={centerSelectableRow}>
           <UnderwritingList />
           <TypeMenu />
           <ProvinceDropdownMenu />
@@ -109,7 +111,7 @@ export class Form extends React.Component {
           </div>
           <SexSwitches />
           <CheckBox />
-          <div className="row" style={marginTopForty}>
+          <div className="row" style={centerSumbitButtonsRow}>
           <ResetButton />
           
           <RaisedButton
