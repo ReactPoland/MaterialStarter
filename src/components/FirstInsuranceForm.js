@@ -40,7 +40,8 @@ export class Form extends React.Component {
     let centerSumbitButtonsRow ={...styles.centerSumbitButtonsRow};
     let raisedButtonFloatAndWidth ={ ...styles.raisedButtonFloatAndWidth};
     let inputsMarginLeft ={...styles.inputsMarginLeft, ...styles.menuTopMargin};
-    let ageInputsRow = {...styles.menuTopMargin, ...styles.ageInputsLeftMargin};
+    let ageInputsRow = {...styles.menuTopMargin, ...styles.ageInputsRowLeftMargin};
+    let ageInputLeftMargin = {...styles.ageInputLeftMargin};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
@@ -96,7 +97,7 @@ export class Form extends React.Component {
             <div>
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
-             <div>
+             <div style={ageInputLeftMargin}>
               <Hourglass style={formIconsTopMargin}/>
             </div>
             <DefaultInput 

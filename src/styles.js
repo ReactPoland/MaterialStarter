@@ -18,5 +18,7 @@ export default {
 	centerSumbitButtonsRow: {marginLeft: '35%', marginTop: 40},
 	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5},
 	inputsMarginLeft: {marginLeft: '5%'},
-	ageInputsLeftMargin: {marginLeft: '22%'}
+	ageInputsRowLeftMargin: {marginLeft: '22%'},
+	ageInputLeftMargin: {marginLeft: '6%'}
+
 };
