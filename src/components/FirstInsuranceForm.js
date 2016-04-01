@@ -54,11 +54,11 @@ export class Form extends React.Component {
                 col-sm-10
                 col-md-11
                 col-lg-11"
-              name='href' 
+              name='client' 
               title='Client 1' 
               required />
             <div>
-              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.redA200}/>
             </div>
             </div>
             <div className="row center-lg center-md center-sm center-xs" style={marginTopForty}>
@@ -71,9 +71,9 @@ export class Form extends React.Component {
                   col-sm-10
                   col-md-11
                   col-lg-11"
-                name='title' title='Amount' required />
+                name='amount' title='Amount' required />
                 <div>
-                  <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+                  <ClearIcon style={formIconsTopMargin} hoverColor={Colors.redA200}/>
                 </div>
             </div>
           <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
@@ -88,11 +88,11 @@ export class Form extends React.Component {
                   col-md-6
                   col-lg-3"
 
-              name='href' 
+              name='actual age' 
               title='Actual age' 
               required />
             <div>
-              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+              <ClearIcon style={formIconsTopMargin} hoverColor={Colors.redA200}/>
             </div>
              <div >
               <Hourglass style={formIconsTopMargin}/>
@@ -102,11 +102,11 @@ export class Form extends React.Component {
                   col-sm-10
                   col-md-6
                   col-lg-3"
-              name='href' 
+              name='nearest age' 
               title='Nearest age' 
               required />
               <div>
-                <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
+                <ClearIcon style={formIconsTopMargin} hoverColor={Colors.redA200}/>
               </div>
           </div>
           <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
@@ -118,7 +118,7 @@ export class Form extends React.Component {
           </div>
           <SexSwitches />
           <CheckBox />
-          <div className="row center-lg center-md center-sm center-xs" >
+          <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
           <ResetButton />
           
           <RaisedButton
