@@ -1,7 +1,7 @@
 export default {
 	tableStyle: {display: "inline-block"},
 	fontSizeStyle: {fontSize: 12},
-	formMaxWidth: {maxWidth: '90%'},
+	formMaxWidth: {maxWidth: '80%'},
 	formMargin: {margin: '0 auto'},
 	componentMarginTop: { marginTop: 20},
 	menuTopMargin: {marginTop: 40},
@@ -16,5 +16,6 @@ export default {
 	resetButtonDisplay: {width: 150},
 	centerSelectableRow: {marginLeft: "20%", marginTop: 40 },
 	centerSumbitButtonsRow: {marginLeft: '35%', marginTop: 40},
-	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5}
+	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5},
+	inputsMarginLeft: {marginLeft: '5%'}
 };

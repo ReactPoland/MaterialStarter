@@ -10,8 +10,10 @@ import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
 import styles from '../styles.js';
-import Accessability from 'material-ui/lib/svg-icons/action/account-box';
-import EditIcon from 'material-ui/lib/svg-icons/image/edit';
+import AccountBox from 'material-ui/lib/svg-icons/action/account-box';
+import Info from 'material-ui/lib/svg-icons/action/info';
+import Hourglass from 'material-ui/lib/svg-icons/action/hourglass-empty';
+import AttachMoney from 'material-ui/lib/svg-icons/editor/attach-money';
 import ClearIcon from 'material-ui/lib/svg-icons/content/clear';
 import Colors from 'material-ui/lib/styles/colors';
 
@@ -37,6 +39,7 @@ export class Form extends React.Component {
     let centerSelectableRow = {...styles.centerSelectableRow};
     let centerSumbitButtonsRow ={...styles.centerSumbitButtonsRow};
     let raisedButtonFloatAndWidth ={ ...styles.raisedButtonFloatAndWidth};
+    let inputsMarginLeft ={...styles.inputsMarginLeft};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
@@ -44,29 +47,31 @@ export class Form extends React.Component {
           <h1 style={formHeading}>First Insurance Form</h1>
           <div className="row" style={marginTopForty}>
             <div>
-              <Accessability style={formIconsTopMargin}/>
+              <AccountBox style={formIconsTopMargin}/>
             </div>
             
             <DefaultInput
               className="col-xs-12
-                col-sm-5
-                col-md-5
-                col-lg-5"
+                col-sm-11
+                col-md-11
+                col-lg-11"
               name='href' 
               title='Client 1' 
               required />
             <div>
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
+            </div>
+            <div className="row" style={marginTopForty}>
             <div>
-              <EditIcon style={formIconsTopMargin}/>
+              <AttachMoney style={formIconsTopMargin}/>
             </div>
            
             <DefaultInput 
               className="col-xs-12
-                col-sm-5
-                col-md-5
-                col-lg-5"
+                col-sm-11
+                col-md-11
+                col-lg-11"
               name='title' title='Amount' required />
               <div>
                 <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
@@ -74,14 +79,15 @@ export class Form extends React.Component {
           </div>
           <div className="row" style={marginTopForty}>
             <div>
-              <EditIcon style={formIconsTopMargin}/>
+              <Info style={formIconsTopMargin}/>
             </div>
             
             <DefaultInput
+
               className="col-xs-12
-                  col-sm-5
-                  col-md-5
-                  col-lg-5"
+                  col-sm-6
+                  col-md-3
+                  col-lg-3"
 
               name='href' 
               title='Actual age' 
@@ -90,13 +96,13 @@ export class Form extends React.Component {
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.greenA200}/>
             </div>
              <div>
-              <EditIcon style={formIconsTopMargin}/>
+              <Hourglass style={formIconsTopMargin}/>
             </div>
             <DefaultInput 
               className="col-xs-12
-                  col-sm-5
-                  col-md-5
-                  col-lg-5"
+                  col-sm-6
+                  col-md-3
+                  col-lg-3"
               name='href' 
               title='Nearest age' 
               required />
