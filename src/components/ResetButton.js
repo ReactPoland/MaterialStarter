@@ -9,7 +9,7 @@ export default class ResetButton extends React.Component {
   	let resetButtonStyling = {...styles.resetButtonMargin, ...styles.resetButtonWidth, ...styles.resetButtonDisplay};
     return (
       <div>
-	    <RaisedButton label="Reset" secondary={true} style={resetButtonStyling} />
+	    <RaisedButton label="Reset"  style={resetButtonStyling}  primary={true}/>
 	  </div>
     );
   }
