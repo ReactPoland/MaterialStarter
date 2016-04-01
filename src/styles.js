@@ -14,7 +14,7 @@ export default {
 	resetButtonMargin: {margin: '0 auto'},
 	resetButtonWidth: {display: 'block'},
 	resetButtonDisplay: {width: 150},
-	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5},
+	raisedButtonFloatAndWidth: {float: 'right', width: 150},
 	inputsMarginLeft: {marginLeft: '5%'}
 
 };
