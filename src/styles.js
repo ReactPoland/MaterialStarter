@@ -5,7 +5,7 @@ export default {
 	formMargin: {margin: '0 auto'},
 	componentMarginTop: { marginTop: 20},
 	menuTopMargin: {marginTop: 40},
-	formIconsTopMargin: {marginTop: 35},
+	formIconsTopMargin: {marginTop: 35, marginRight: 5},
 	ageInputsStyle: {width: '80%'},
 	sexSwitchesBlock: {maxWidth: 250},
 	sexSwitchesRadioButton: { marginBottom: 16},
@@ -15,8 +15,6 @@ export default {
 	resetButtonWidth: {display: 'block'},
 	resetButtonDisplay: {width: 150},
 	raisedButtonFloatAndWidth: {float: 'right', width: 150, marginLeft: 5},
-	inputsMarginLeft: {marginLeft: '5%'},
-	ageInputsRowLeftMargin: {marginLeft: '22%'},
-	ageInputLeftMargin: {marginLeft: '6%'}
+	inputsMarginLeft: {marginLeft: '5%'}
 
 };

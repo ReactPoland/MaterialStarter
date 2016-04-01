@@ -83,9 +83,9 @@ export class Form extends React.Component {
             
             <DefaultInput
 
-              className="col-xs-9
-                  col-sm-10
-                  col-md-6
+              className="col-xs-6
+                  col-sm-3
+                  col-md-3
                   col-lg-3"
 
               name='actual age' 
@@ -94,13 +94,15 @@ export class Form extends React.Component {
             <div>
               <ClearIcon style={formIconsTopMargin} hoverColor={Colors.redA200}/>
             </div>
+            </div>
+            <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
              <div >
               <Hourglass style={formIconsTopMargin}/>
             </div>
             <DefaultInput 
-              className="col-xs-9
-                  col-sm-10
-                  col-md-6
+              className="col-xs-6
+                  col-sm-3
+                  col-md-3
                   col-lg-3"
               name='nearest age' 
               title='Nearest age' 
