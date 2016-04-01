@@ -32,14 +32,17 @@ export class Form extends React.Component {
     let ageInputsStyle = {...styles.ageInputsStyle};
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
+    let formIconsTopMargin ={...styles.formIconsTopMargin};
     let JSXtoReturn = (
       
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
           <h1 style={formHeading}>First Insurance Form</h1>
           <div className="row" style={marginTopForty}>
-            <Accessability />
-            <ClearIcon />
+            <div>
+              <Accessability style={formIconsTopMargin}/>
+            </div>
+            
             <DefaultInput
               className="col-xs-12
                 col-sm-5
@@ -48,18 +51,28 @@ export class Form extends React.Component {
               name='href' 
               title='Client 1' 
               required />
-           <EditIcon />
-           <ClearIcon />
+            <div>
+              <ClearIcon style={formIconsTopMargin}/>
+            </div>
+            <div>
+              <EditIcon style={formIconsTopMargin}/>
+            </div>
+           
             <DefaultInput 
               className="col-xs-12
                 col-sm-5
                 col-md-5
                 col-lg-5"
               name='title' title='Amount' required />
+              <div>
+                <ClearIcon style={formIconsTopMargin}/>
+              </div>
           </div>
           <div className="row" style={marginTopForty}>
-            <EditIcon />
-            <ClearIcon />
+            <div>
+              <EditIcon style={formIconsTopMargin}/>
+            </div>
+            
             <DefaultInput
               className="col-xs-12
                   col-sm-5
@@ -69,8 +82,12 @@ export class Form extends React.Component {
               name='href' 
               title='Actual age' 
               required />
-            <EditIcon />
-            <ClearIcon />
+            <div>
+              <ClearIcon style={formIconsTopMargin}/>
+            </div>
+             <div>
+              <EditIcon style={formIconsTopMargin}/>
+            </div>
             <DefaultInput 
               className="col-xs-12
                   col-sm-5
@@ -79,6 +96,9 @@ export class Form extends React.Component {
               name='href' 
               title='Nearest age' 
               required />
+              <div>
+                <ClearIcon style={formIconsTopMargin}/>
+              </div>
           </div>
           <div className="row" style={marginTopForty}>
           <UnderwritingList />
