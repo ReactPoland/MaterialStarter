@@ -47,6 +47,14 @@ class CoreLayout extends React.Component {
               icon={<Autorenew />} />
           </Link>
           </div>
+           <div  style={{marginRight: 30, marginTop: 20}}>
+          <Link to='/data-view'>
+            <FlatButton
+              backgroundColor="#ffffff"
+              label="Data View"
+              icon={<Autorenew />} />
+          </Link>
+          </div>
         </AppBar>
         <div>
           {this.props.children}

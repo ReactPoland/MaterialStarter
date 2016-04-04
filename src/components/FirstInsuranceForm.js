@@ -21,13 +21,21 @@ import Colors from 'material-ui/lib/styles/colors';
 export class Form extends React.Component {
   constructor() {
     super();
-    this.state = { canSubmit: false }
+    this.state = { 
+      canSubmit: false,
+      formData: []
+
+     }
     this._submit = this._submit.bind(this);
   }
 
   _submit(model) {
     console.info("data submited", model);
     this.props.onSubmit(model);
+    this.setState({
+        formData: model
+    });
+    console.log(this.state.formData);
 
   }
 
