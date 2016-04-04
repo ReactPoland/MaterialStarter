@@ -6,12 +6,30 @@ import {
 } from 'material-ui-country-flags';
 import { Form } from 'components/FirstInsuranceForm.js';
 import styles from '../styles.js';
+import ViewFormData from './ViewFormData.js';
+import { bindActionCreators } from 'redux';
+import { connect  } from 'react-redux';
+import * as formDataActions from 'actions/formData';
 
 
+const mapStateToProps = (state) => ({
+ formData: state.formData
+});
 
+const mapDispatchToProps = (dispatch) => ({
+ actions: bindActionCreators(formDataActions, dispatch)
+});
 
-export default class SubpageView extends React.Component {
+class SubpageView extends React.Component {
+  submitForm(model) {
+    (model) => alert(JSON.stringify(model, null, 9), "alert from SubpageView")
+    this.props.actions.submitData(model);
+  }
+
   render () {
+    console.info(this.props);
+    console.info("this.props.formData", this.props.formData);
+    console.info("this.props.actions.formData", this.props.actions.formData);
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
     
@@ -19,9 +37,13 @@ export default class SubpageView extends React.Component {
       <div style={formComponentMarginTop}>
         
         <div style={formMaxWidthAndMargins}>
-          <Form onSubmit={(model) => alert(JSON.stringify(model, null, 4))} />
+          <Form onSubmit={this.submitForm} />
         </div>
+        
       </div>);
 
   }
 }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SubpageView);

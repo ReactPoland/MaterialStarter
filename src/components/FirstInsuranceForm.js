@@ -27,6 +27,7 @@ export class Form extends React.Component {
 
      }
     this._submit = this._submit.bind(this);
+    this._showDataSubmitted = this._showDataSubmitted.bind(this);
   }
 
   _submit(model) {
@@ -37,6 +38,9 @@ export class Form extends React.Component {
     });
     console.log(this.state.formData);
 
+  }
+  _showDataSubmitted (  ) {
+    console.log("show data console log just to check");
   }
 
   render() {
@@ -52,7 +56,7 @@ export class Form extends React.Component {
       
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          <h1 style={formHeading}>First Insurance Form</h1>
+          <h1 style={formHeading} >First Insurance Form</h1>
           <div className="row center-lg center-md center-sm center-xs" style={marginTopForty}>
             <div>
               <AccountBox 
@@ -107,7 +111,7 @@ export class Form extends React.Component {
             </div>
             <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
              <div >
-              <Hourglass style={formIconsTopMargin}/>
+              <Hourglass style={formIconsTopMargin} />
             </div>
             <DefaultInput 
               className="col-xs-6
@@ -132,7 +136,7 @@ export class Form extends React.Component {
           <CheckBox />
           <div className="row center-lg center-md center-sm center-xs" style={formIconsTopMargin}>
           <div className="row center-lg center-md center-sm center-xs">
-          <ResetButton />
+          <ResetButton showData={this._showDataSubmitted} />
           
           <RaisedButton
             secondary={true}
