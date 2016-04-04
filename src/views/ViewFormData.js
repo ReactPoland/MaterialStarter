@@ -25,9 +25,10 @@ export default class FormDataView extends React.Component {
         <Table>
 		    <TableHeader>
 		      <TableRow>
-		        <TableHeaderColumn>ID</TableHeaderColumn>
-		        <TableHeaderColumn>Name</TableHeaderColumn>
-		        <TableHeaderColumn>Status</TableHeaderColumn>
+		        <TableHeaderColumn>Client</TableHeaderColumn>
+		        <TableHeaderColumn>Amount</TableHeaderColumn>
+		        <TableHeaderColumn>Actual age</TableHeaderColumn>
+		        <TableHeaderColumn>Nearest age</TableHeaderColumn>
 		      </TableRow>
 		    </TableHeader>
 		    <TableBody>
@@ -35,20 +36,24 @@ export default class FormDataView extends React.Component {
 		        <TableRowColumn>1</TableRowColumn>
 		        <TableRowColumn>John Smith</TableRowColumn>
 		        <TableRowColumn>Employed</TableRowColumn>
+		        <TableRowColumn>Employed</TableRowColumn>
 		      </TableRow>
 		      <TableRow>
 		        <TableRowColumn>2</TableRowColumn>
 		        <TableRowColumn>Randal White</TableRowColumn>
 		        <TableRowColumn>Unemployed</TableRowColumn>
+		        <TableRowColumn>Employed</TableRowColumn>
 		      </TableRow>
 		      <TableRow>
 		        <TableRowColumn>3</TableRowColumn>
 		        <TableRowColumn>Stephanie Sanders</TableRowColumn>
 		        <TableRowColumn>Employed</TableRowColumn>
+		        <TableRowColumn>Employed</TableRowColumn>
 		      </TableRow>
 		      <TableRow>
 		        <TableRowColumn>4</TableRowColumn>
 		        <TableRowColumn>Steve Brown</TableRowColumn>
+		        <TableRowColumn>Employed</TableRowColumn>
 		        <TableRowColumn>Employed</TableRowColumn>
 		      </TableRow>
 		    </TableBody>
