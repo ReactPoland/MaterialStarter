@@ -24,12 +24,8 @@ const mapDispatchToProps = (dispatch) => ({
 class SubpageView extends React.Component {
 
   submitForm(model) {
-    (model) => alert(JSON.stringify(model, null, 9));
+    /*(model) => alert(JSON.stringify(model, null, 9));*/
     this.props.actions.submitData(model);
-
-    /*let myData =(model) => alert(JSON.stringify(model, null, 9));*/
-
-    /*this.props.actions.submitData(myData);*/
   }
 
   render () {
@@ -43,7 +39,7 @@ class SubpageView extends React.Component {
       <div style={formComponentMarginTop}>
         
         <div style={formMaxWidthAndMargins}>
-          <Form onSubmit={this.submitForm} />
+          <Form submitModel={this.submitForm} />
         </div>
         
       </div>);

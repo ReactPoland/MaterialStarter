@@ -19,19 +19,30 @@ import Colors from 'material-ui/lib/styles/colors';
 
 
 export class Form extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { 
-      canSubmit: false
-
+      canSubmit: false,
+      newModel: {}
      }
     /*this._showDataSubmitted = this._showDataSubmitted.bind(this);*/
     /*this.props.onSubmit = this.props.onSubmit.bind(this);*/
+    this._submit = this._submit.bind(this);
   }
 
   _submit(model) {
+
     console.info("data submited", model);
-    this.props.onSubmit(model);
+    let passedModel = model;
+    console.log(passedModel);
+    let passedModelClient = passedModel.client;
+    console.log(passedModelClient);
+    let passedModelAmount = passedModel.amount;
+    console.log(passedModelAmount);
+    this.setState({
+      newModel: model
+    });
+    
   }
 
   _showDataSubmitted (  ) {
@@ -39,6 +50,7 @@ export class Form extends React.Component {
   }
 
   render() {
+    console.log(this.state.newModel);
     let ageInputsStyle = {...styles.ageInputsStyle};
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
@@ -48,7 +60,7 @@ export class Form extends React.Component {
     let resetButtonStyling = {...styles.resetButtonMargin, ...styles.resetButtonWidth, ...styles.resetButtonDisplay};
     let buttonsLeftMargin = { ...styles.inputsMarginLeft};
     let JSXtoReturn = (
-      
+      <div>
       <Formsy.Form onSubmit={this._submit}>
         <Paper zDepth={1} style={{padding: 32}}>
           <h1 style={formHeading} >First Insurance Form</h1>
@@ -140,9 +152,16 @@ export class Form extends React.Component {
             label={'Submit form'} />
           </div>
           </div>
+
         </Paper>
       </Formsy.Form>
-      
+      <div>
+      {this.state.newModel.client}
+      {this.state.newModel.amount}
+      {this.state.newModel["nearest age"]}
+      {this.state.newModel["actual age"]}
+      </div>
+      </div>
     );
 
     return JSXtoReturn;

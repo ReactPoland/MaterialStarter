@@ -21,7 +21,9 @@ const mapDispatchToProps = (dispatch) => ({
 
 class FormDataView extends React.Component {
   render () {
-    
+    console.info(this.props);
+    console.info("this.props.formData", this.props.formData);
+    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
     return (
       <div >
         
