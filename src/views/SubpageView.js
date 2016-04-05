@@ -11,25 +11,31 @@ import { bindActionCreators } from 'redux';
 import { connect  } from 'react-redux';
 import * as formDataActions from 'actions/formData';
 
-
+//function that return state of application , needed for CONNECT
 const mapStateToProps = (state) => ({
  formData: state.formData
 });
 
+//function that return actions of application , needed for CONNECT
 const mapDispatchToProps = (dispatch) => ({
  actions: bindActionCreators(formDataActions, dispatch)
 });
 
 class SubpageView extends React.Component {
+
   submitForm(model) {
-    (model) => alert(JSON.stringify(model, null, 9))
+    (model) => alert(JSON.stringify(model, null, 9));
     /*this.props.actions.submitData(model);*/
+
+    /*let myData =(model) => alert(JSON.stringify(model, null, 9));*/
+
+    /*this.props.actions.submitData(myData);*/
   }
 
   render () {
     console.info(this.props);
     console.info("this.props.formData", this.props.formData);
-    /*console.info("this.props.actions.formData", this.props.actions.formData);*/
+    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
     
@@ -47,3 +53,7 @@ class SubpageView extends React.Component {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(SubpageView);
+
+//CONNECT takes function that returns actions, function that returns state,
+//and as third argument takes react component( the view), it then makes 
+//REACT SMART COMPONENT WITH these bound together

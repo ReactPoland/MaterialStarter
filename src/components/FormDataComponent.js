@@ -12,7 +12,9 @@ export default class FormDataView extends React.Component {
     
     return (
       <div>
-        <h2 >View Data from the form here</h2>
+      	<div className="row center-lg center-md center-sm center-xs" >
+       		<h2 >View Data from the form here:</h2>
+       	</div>
         <Table>
 		    <TableHeader>
 		      <TableRow>

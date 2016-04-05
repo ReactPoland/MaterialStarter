@@ -20,8 +20,8 @@ export default class FormDataView extends React.Component {
   render () {
     
     return (
-      <div>
-        <h2 >View Data from the form here</h2>
+      <div >
+        
         <FormDataComponent />
         
       </div>);

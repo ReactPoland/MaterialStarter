@@ -25,8 +25,8 @@ export class Form extends React.Component {
       canSubmit: false
 
      }
-    /*this._submit = this._submit.bind(this);*/
-    this._showDataSubmitted = this._showDataSubmitted.bind(this);
+    /*this._showDataSubmitted = this._showDataSubmitted.bind(this);*/
+    /*this.props.onSubmit = this.props.onSubmit.bind(this);*/
   }
 
   _submit(model) {
