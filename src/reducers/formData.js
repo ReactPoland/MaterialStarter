@@ -8,10 +8,10 @@ const initialState = new Map();
 
 export default createReducer(initialState, {
  [FORM_DATA_SUBMIT]: (state, payload) => {
- console.info("payload", model);
+ console.info("payload", payload);
 
    /// .......
-   return
+   return payload;
  
  }
 });

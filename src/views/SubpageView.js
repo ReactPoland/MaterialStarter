@@ -25,7 +25,7 @@ class SubpageView extends React.Component {
 
   submitForm(model) {
     (model) => alert(JSON.stringify(model, null, 9));
-    /*this.props.actions.submitData(model);*/
+    this.props.actions.submitData(model);
 
     /*let myData =(model) => alert(JSON.stringify(model, null, 9));*/
 
@@ -35,7 +35,7 @@ class SubpageView extends React.Component {
   render () {
     console.info(this.props);
     console.info("this.props.formData", this.props.formData);
-    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
+    console.info("this.props.actions.formData", this.props.actions.submitData);
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
     

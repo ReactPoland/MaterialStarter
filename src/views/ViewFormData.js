@@ -7,16 +7,19 @@ import TableHeader from 'material-ui/lib/table/table-header';
 import TableRowColumn from 'material-ui/lib/table/table-row-column';
 import TableBody from 'material-ui/lib/table/table-body';
 import FormDataComponent from '../components/FormDataComponent.js';
+import { bindActionCreators } from 'redux';
+import { connect  } from 'react-redux';
+import * as formDataActions from 'actions/formData';
 
-/*const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
  formData: state.formData
 });
 
 const mapDispatchToProps = (dispatch) => ({
  actions: bindActionCreators(formDataActions, dispatch)
-});*/
+});
 
-export default class FormDataView extends React.Component {
+class FormDataView extends React.Component {
   render () {
     
     return (
@@ -28,3 +31,6 @@ export default class FormDataView extends React.Component {
 
   }
 }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormDataView);
