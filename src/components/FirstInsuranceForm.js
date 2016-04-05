@@ -155,11 +155,19 @@ export class Form extends React.Component {
 
         </Paper>
       </Formsy.Form>
-      <div>
+      <div >
+      <h2 className="row center-lg center-md center-sm center-xs">
       {this.state.newModel.client}
+      </h2>
+      <h2 className="row center-lg center-md center-sm center-xs">
       {this.state.newModel.amount}
+      </h2>
+      <h2 className="row center-lg center-md center-sm center-xs">
       {this.state.newModel["nearest age"]}
+      </h2>
+      <h2 className="row center-lg center-md center-sm center-xs">
       {this.state.newModel["actual age"]}
+      </h2>
       </div>
       </div>
     );
