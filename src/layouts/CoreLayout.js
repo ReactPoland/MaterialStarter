@@ -12,6 +12,7 @@ import AlertWarning from 'material-ui/lib/svg-icons/alert/warning';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 import Autorenew from 'material-ui/lib/svg-icons/action/autorenew';
+import Description from 'material-ui/lib/svg-icons/action/description';
 
 const mapStateToProps = (state) => ({
   ...state
@@ -30,7 +31,7 @@ class CoreLayout extends React.Component {
   render () {
 
     return (
-      <div>
+      <div >
         <AppBar
           title={
             <h1 style={{display: 'flex', paddingLeft: 30, fontSize: 25, lineHeight: 2}}>
@@ -38,12 +39,12 @@ class CoreLayout extends React.Component {
             </h1>
           }
           iconElementLeft={<span />}>
-          <div  style={{marginRight: 30, marginTop: 20}}>
+          <div   style={{marginRight: 30, marginTop: 20}}>
           <Link to='/starter'>
             <FlatButton
               backgroundColor="#ffffff"
               label="Form"
-              icon={<Autorenew />} />
+              icon={<Accessability />} />
           </Link>
           </div>
            <div  style={{marginRight: 30, marginTop: 20}}>
@@ -55,13 +56,13 @@ class CoreLayout extends React.Component {
           </Link>
           </div>
           
-          <div style={{marginRight: 500, marginTop: 20}}>
+          <div style={{marginRight: 30, marginTop: 20}}>
           <Link to='/publishing'>
             <FlatButton
               backgroundColor="#ffffff"
               second={true}
               label="Articles"
-              icon={<Accessability />} />
+              icon={<Description />} />
           </Link>
           </div>
         </AppBar>
