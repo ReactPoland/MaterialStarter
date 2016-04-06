@@ -16,27 +16,49 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
- actions: bindActionCreators(formDataActions, dispatch)
+ formActions: bindActionCreators(formDataActions, dispatch)
 });
 
 class FormDataView extends React.Component {
 
 			constructor(props) {
-	   	super(props);
-  }
+			   	super(props);
+		  }
+		  componentWillMount() {
+		    this._fetchFormData();
+		  }
+		  async _fetchFormData() {
+		    let inputDataGathered = [
+		      {
+		          "client" : "new client 15",
+		          "amount" : 9990,
+		          "nearest age" : 55,
+		          "actual age" : 67
+		      },
+		      {
+		          "client" : "another client 25",
+		          "amount" : 7770,
+		          "nearest age" : 22,
+		          "actual age" : 33
+		      }
+		    ];
+
+		    this.props.formActions.submitData(inputDataGathered);
+		  }
 	  	render () {
 	  		let formDataJSX = [];
-		  	for(let formDataKey in this.props.formData) {
+		  	for(let formDataKey in this.props.formDataReducer) {
 		  		let formDataDetails = this.props.formDataReducer[formDataKey];
 		  		let currentFormDataJSX = (
 		  			<div key={formDataKey}>
 		  				<h2>{formDataDetails.amount}</h2>
-		  				<h3>{formDataDetails.client}</h3>
 		  			</div>);
 		  		formDataJSX.push(currentFormDataJSX);
 		  	}
 		    console.info(this.props);
-		    console.info("this.props.formData", this.props.formData);
+		    /*HERE THE DATA STORED IN THIS.PROPS.FORMDATAREDUCER ARE SEND BY THIS.PROPS.FORMACTIONS.SUBMITDATA(INPUT)
+		    SOOOO I NEED TO PROVIDE HERE DATA TAKEN FROM FORM COMPONENT AND THATS IT*/
+		    console.info("this.props.formData", this.props.formDataReducer);
 		    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
 		    return (
 		      <div >

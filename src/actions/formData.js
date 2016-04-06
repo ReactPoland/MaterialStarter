@@ -6,7 +6,7 @@ export default {
  submitData: (model) => {
    return {
      type: FORM_DATA_SUBMIT,
-     payload: { model:model }
+     payload: { model: model }
    }
  }
 }

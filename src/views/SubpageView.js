@@ -13,7 +13,7 @@ import * as formDataActions from 'actions/formData';
 
 //function that return state of application , needed for CONNECT
 const mapStateToProps = (state) => ({
- formData: state.formData
+ formData: state.formDataReducer
 });
 
 //function that return actions of application , needed for CONNECT
@@ -30,7 +30,7 @@ class SubpageView extends React.Component {
 
   render () {
     console.info(this.props);
-    console.info("this.props.formData", this.props.formData);
+    console.info("this.props.formDataReducer", this.props.formData);
     console.info("this.props.actions.formData", this.props.actions.submitData);
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
@@ -39,7 +39,7 @@ class SubpageView extends React.Component {
       <div style={formComponentMarginTop}>
         
         <div style={formMaxWidthAndMargins}>
-          <Form submitModel={this.submitForm} />
+          <Form  />
         </div>
         
       </div>);
