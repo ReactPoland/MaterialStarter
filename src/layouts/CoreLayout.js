@@ -39,15 +39,8 @@ class CoreLayout extends React.Component {
           }
           iconElementLeft={<span />}>
 
-          <div style={{marginRight: 30, marginTop: 20}}>
-          <Link to='/starter'>
-            <FlatButton
-              backgroundColor="#ffffff"
-              label="Example LINK THAT WORKS"
-              icon={<Autorenew />} />
-          </Link>
-          </div>
-          <div style={{marginRight: 30, marginTop: 20}}>
+          
+          <div style={{marginRight: 500, marginTop: 20}}>
           <Link to='/publishing'>
             <FlatButton
               backgroundColor="#ffffff"
