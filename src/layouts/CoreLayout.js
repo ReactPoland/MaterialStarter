@@ -48,11 +48,13 @@ class CoreLayout extends React.Component {
           </Link>
           </div>
           <div style={{marginRight: 30, marginTop: 20}}>
+          <Link to='/publishing'>
             <FlatButton
               backgroundColor="#ffffff"
               second={true}
-              label="THIS DOESN'T WORK (clicks)"
+              label="Articles"
               icon={<Accessability />} />
+          </Link>
           </div>
         </AppBar>
         <div>
