@@ -12,7 +12,7 @@ import { connect  } from 'react-redux';
 import * as formDataActions from 'actions/formData';
 
 const mapStateToProps = (state) => ({
- formData: state.formData
+ ...state
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -20,18 +20,32 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class FormDataView extends React.Component {
-  render () {
-    console.info(this.props);
-    console.info("this.props.formData", this.props.formData);
-    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
-    return (
-      <div >
-        
-        <FormDataComponent />
-        
-      </div>);
 
+			constructor(props) {
+	   	super(props);
   }
+	  	render () {
+	  		let formDataJSX = [];
+		  	for(let formDataKey in this.props.formData) {
+		  		let formDataDetails = this.props.formDataReducer[formDataKey];
+		  		let currentFormDataJSX = (
+		  			<div key={formDataKey}>
+		  				<h2>{formDataDetails.amount}</h2>
+		  				<h3>{formDataDetails.client}</h3>
+		  			</div>);
+		  		formDataJSX.push(currentFormDataJSX);
+		  	}
+		    console.info(this.props);
+		    console.info("this.props.formData", this.props.formData);
+		    /*console.info("this.props.actions.formData", this.props.actions.submitData);*/
+		    return (
+		      <div >
+		        
+		        <FormDataComponent />
+		        {formDataJSX}
+		      </div>);
+
+		  }
 }
 
 
