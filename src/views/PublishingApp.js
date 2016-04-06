@@ -4,7 +4,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import articleActions from 'actions/article.js';
-import { Form } from 'components/Form.js';
 
 const mapStateToProps = (state) => ({
 	...state

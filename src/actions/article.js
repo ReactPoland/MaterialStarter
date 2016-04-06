@@ -1,5 +1,6 @@
 import {
- FORM_DATA_SUBMIT
+ FORM_DATA_SUBMIT,
+ ARTICLES_LIST_ADD
 } from '../constants/formData';
 
 export default {
@@ -12,7 +13,7 @@ export default {
   submitData: (model) => {
    return {
      type: FORM_DATA_SUBMIT,
-     payload: { model }
+     payload: { model: model }
    }
  }
 }
