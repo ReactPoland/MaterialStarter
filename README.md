@@ -23,6 +23,37 @@
 └── tests                    # Unit tests
 ```
 
+#### When running you will see (AT URL: http://localhost:3000/#/ ):
+![screen1](https://d3higte790sj35.cloudfront.net/images/nl/eo/e0a65a2420050c890b4e90915cd2b0e8.jpeg)
+
+####INFORMATIONS about the view:
+- RED COLOR: The header is located at ***src/layouts/CoreLayout.js***
+- BLUE COLOR: The link is located at the same CoreLaout file, codesnippet:
+```
+          <Link to='/starter'>
+            <FlatButton
+              backgroundColor="#ffffff"
+              label="Example LINK THAT WORKS"
+              icon={<Autorenew />} />
+          </Link>
+```
+- GREEN COLOR: The HomeView is located at ***src/views/HomeView.js***
+ 
+#### Second route (AT URL: http://localhost:3000/#/starter  ):
+![screen2](https://d3higte790sj35.cloudfront.net/images/mv/ke/343d4ced995653d43c88ec527af78eb9.jpeg)
+
+LOCATIONS:
+- In the views folder: scr/views/SubpageView.js
+- the form (Formsy) is located at ***src/components/Form.js***
+- ORANGE COLOR: this is how it reacts after a submit (you can see console.log) - it is because of Formsy used, please follow
+
+
+### IMPORTANT RULE: in components, we use only ***DUMB COMPONENTS*** (http://jaketrent.com/post/smart-dumb-components-react/) and in views folder we put ***SMART COMPONENTS***
+
+
+
+
+
 ### SETUP steps:
 ```
 $ git clone <<git url>>
