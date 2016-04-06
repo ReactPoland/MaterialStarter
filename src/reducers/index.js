@@ -6,6 +6,6 @@ import formData from './formData';
 
 export default combineReducers({
   routing: routeReducer,
-  article: article,
+  articleReducer: article,
   formData: formData
 });

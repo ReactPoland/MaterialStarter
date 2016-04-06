@@ -39,10 +39,10 @@ class PublishingApp extends React.Component {
   }
 
   render () {
-    console.info("from reducer -> ", this.props.article)
+    console.info("from reducer -> ", this.props.articleReducer)
   	let articlesJSX = [];
-  	for(let articleKey in this.props.article) {
-  		let articleDetails = this.props.article[articleKey];
+  	for(let articleKey in this.props.articleReducer) {
+  		let articleDetails = this.props.articleReducer[articleKey];
   		let currentArticleJSX = (
   			<div key={articleKey}>
   				<h2>{articleDetails.articleTitle}</h2>

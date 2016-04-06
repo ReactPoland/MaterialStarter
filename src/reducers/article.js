@@ -1,4 +1,4 @@
-const article = (state = {}, action) => {
+const articleFromReducer = (state = {}, action) => {
 	switch (action.type) {
 		case 'RETURN_ALL_ARTICLES':
 			return Object.assign({}, state);
@@ -10,4 +10,4 @@ const article = (state = {}, action) => {
 	}
 }
 
-export default article
+export default articleFromReducer

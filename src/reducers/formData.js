@@ -2,7 +2,7 @@ import { createReducer } from '../utils';
 
 import {
  FORM_DATA_SUBMIT
-} from 'constants/formData';
+} from 'constants/formConstantsList';
 
 const initialState = new Map();
 
