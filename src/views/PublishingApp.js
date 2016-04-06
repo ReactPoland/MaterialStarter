@@ -39,6 +39,7 @@ class PublishingApp extends React.Component {
   }
 
   render () {
+    console.info("from reducer -> ", this.props.article)
   	let articlesJSX = [];
   	for(let articleKey in this.props.article) {
   		let articleDetails = this.props.article[articleKey];
