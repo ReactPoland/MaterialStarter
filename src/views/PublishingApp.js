@@ -21,6 +21,7 @@ class PublishingApp extends React.Component {
   componentWillMount() {
     this._fetch();
   }
+  //mocked data here, normally from database
   async _fetch() {
     let articles = [
       {
