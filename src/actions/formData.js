@@ -1,6 +1,6 @@
 import {
  FORM_DATA_SUBMIT
-} from '../constants/formConstantsList';
+} from '../constants/formConstantsList.js';
 
 export default {
  submitData: (model) => {

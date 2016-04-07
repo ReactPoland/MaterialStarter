@@ -16,61 +16,19 @@ import Hourglass from 'material-ui/lib/svg-icons/action/hourglass-empty';
 import AttachMoney from 'material-ui/lib/svg-icons/editor/attach-money';
 import ClearIcon from 'material-ui/lib/svg-icons/content/clear';
 import Colors from 'material-ui/lib/styles/colors';
-import { bindActionCreators } from 'redux';
-import { connect  } from 'react-redux';
-import * as formDataActions from 'actions/formData';
 
-//function that return state of application , needed for CONNECT
-const mapStateToProps = (state) => ({
- formData: state.formDataReducer
-});
 
-//function that return actions of application , needed for CONNECT
-const mapDispatchToProps = (dispatch) => ({
- actions: bindActionCreators(formDataActions, dispatch)
-});
-
-/*TUTAJ WYSYLAM DANE DO REDUCERA I POTEM MUSZE JE UMIEC ODEBRAC W VIEWFORMDATA*/
-
- class Form extends React.Component {
+export class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      canSubmit: false,
-      newModel: {}
+      canSubmit: false
      }
-    /*this._showDataSubmitted = this._showDataSubmitted.bind(this);*/
-    /*this.props.onSubmit = this.props.onSubmit.bind(this);*/
-    this._submit = this._submit.bind(this);
-  }
-
-  _submit(model) {
-
-    console.info("data submited", model);
-    let passedModel = model;
-    console.log(passedModel);
-    let passedModelClient = passedModel.client;
-    console.log(passedModelClient);
-    let passedModelAmount = passedModel.amount;
-    console.log(passedModelAmount);
-    this.setState({
-      newModel: model
-    });
     
   }
 
-  submitForm(model) {
-    /*(model) => alert(JSON.stringify(model, null, 9));*/
-    this.props.actions.submitData(model);
-  }
-
-  _showDataSubmitted (  ) {
-    console.log("show data console log just to check");
-  }
-
-
   render() {
-    console.log("this.state.newModel equals to  form data", this.state.newModel);
+    
     let ageInputsStyle = {...styles.ageInputsStyle};
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
@@ -81,9 +39,9 @@ const mapDispatchToProps = (dispatch) => ({
     let buttonsLeftMargin = { ...styles.inputsMarginLeft};
     let JSXtoReturn = (
       <div>
-      <Formsy.Form onSubmit={this._submit}>
+      <Formsy.Form onSubmit={this.props.onSubmit}>
         <Paper zDepth={1} style={{padding: 32}}>
-          <h1 style={formHeading} onClick={this.props.sendData}>First Insurance Form</h1>
+          <h1 style={formHeading} >First Insurance Form</h1>
           <div className="row center-lg center-md center-sm center-xs" style={marginTopForty}>
             <div>
               <AccountBox 
@@ -175,26 +133,9 @@ const mapDispatchToProps = (dispatch) => ({
 
         </Paper>
       </Formsy.Form>
-      <div >
-      <h2 className="row center-lg center-md center-sm center-xs">
-      {this.state.newModel.client}
-      </h2>
-      <h2 className="row center-lg center-md center-sm center-xs">
-      {this.state.newModel.amount}
-      </h2>
-      <h2 className="row center-lg center-md center-sm center-xs">
-      {this.state.newModel["nearest age"]}
-      </h2>
-      <h2 className="row center-lg center-md center-sm center-xs">
-      {this.state.newModel["actual age"]}
-      </h2>
-      </div>
       </div>
     );
 
     return JSXtoReturn;
   }
 }
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Form);

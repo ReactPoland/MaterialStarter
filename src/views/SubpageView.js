@@ -4,45 +4,52 @@ import {
   Icon_Flag_BG,
   Icon_Flag_US
 } from 'material-ui-country-flags';
-import { Form } from 'components/FirstInsuranceForm.js';
+import { Form } from 'components/Form.js';
 import styles from '../styles.js';
-import ViewFormData from './ViewFormData.js';
 import { bindActionCreators } from 'redux';
 import { connect  } from 'react-redux';
 import * as formDataActions from 'actions/formData';
 
-//function that return state of application , needed for CONNECT
 const mapStateToProps = (state) => ({
- formData: state.formDataReducer
+ /*formData: state.formData*/
+ ...state
 });
 
-//function that return actions of application , needed for CONNECT
+
 const mapDispatchToProps = (dispatch) => ({
- actions: bindActionCreators(formDataActions, dispatch)
+ formDataActions: bindActionCreators(formDataActions, dispatch)
 });
 
 class SubpageView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  submitForm(model) {
-    /*(model) => alert(JSON.stringify(model, null, 9));*/
-    this.props.actions.submitData(model);
+    this._onSubmit = this._onSubmit.bind(this);
+  }
+  componentWillMount() {
+    this._onSubmit();
+  }
+
+  _onSubmit(model) {
+    console.info("model ", model);
+    this.props.formDataActions.submitData(model);
   }
 
   render () {
-    console.info(this.props);
-    console.info("this.props.formDataReducer", this.props.formData);
-    console.info("this.props.actions.formData", this.props.actions.submitData);
+
+    console.info("222from reducer -> ", this.props.formDataReducer);
     let formMaxWidthAndMargins = {...styles.formMaxWidth, ...styles.formMargin};
     let formComponentMarginTop = {...styles.componentMarginTop};
-    
+
     return (
       <div style={formComponentMarginTop}>
-        
-        <div style={formMaxWidthAndMargins}>
-          <Form  />
-        </div>
-        
-      </div>);
+          
+      <div style={formMaxWidthAndMargins}>
+        <Form onSubmit={this._onSubmit} />
+      </div>
+          
+    </div>);
 
   }
 }
