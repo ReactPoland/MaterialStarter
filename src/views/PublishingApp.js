@@ -19,6 +19,8 @@ class PublishingApp extends React.Component {
   }
   componentWillMount() {
     this._fetch();
+    this._tryArraySlice();
+
   }
   //mocked data here, normally from database
   async _fetch() {
@@ -57,9 +59,13 @@ class PublishingApp extends React.Component {
       wantPersonNames.push(personsNames);
     });
     console.log("for each method log ",wantPersonNames);
- 
+    
 
     this.props.articleActions.articlesList(wantPersonNames);
+  }
+  async _tryArraySlice() {
+    console.log("fire _tryArraySlice ");
+    /*this.props.articleActions.articlesList(wantPersonNames);*/
   }
 
   render () {
