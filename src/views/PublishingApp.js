@@ -35,17 +35,23 @@ class PublishingApp extends React.Component {
       }
     ];
     let people = [
-    {
-      name: 'Shane'
-    },
-    {
-      name: 'Sally'
-    }
-
-
+      {
+        name: 'Shane'
+      },
+      {
+        name: 'Sally'
+      }
+    ];
+    let anotherPeople = [
+      {
+        name: 'Bill'
+      },
+      {
+        name: 'Tom'
+      }
     ];
     let wantPersonNames =[];
-    people.forEach(function (person){
+    people.concat(anotherPeople).forEach(function (person){
       let personsNames = person.name;
       console.log(personsNames);
       wantPersonNames.push(personsNames);
@@ -60,14 +66,16 @@ class PublishingApp extends React.Component {
     console.info("from reducer -> ", this.props.articleReducer);
     let personNamesFromReducer = this.props.articleReducer;
 
-    let personNamesJSX = (
-        <div>
-          <h2>{personNamesFromReducer[0]}</h2>
-          <h3>{personNamesFromReducer[1]}</h3>
-
-
+    let mapPersonsJSX = [];
+    for(let personKey in personNamesFromReducer) {
+      let personDetails = personNamesFromReducer[personKey];
+      let currentArticleJSX = (
+        <div key={personKey}>
+          <h2>{personDetails}</h2>
         </div>);
-      
+      mapPersonsJSX.push(currentArticleJSX)
+      };
+   
   	/*let articlesJSX = [];
   	for(let articleKey in this.props.articleReducer) {
   		let articleDetails = this.props.articleReducer[articleKey];
@@ -84,7 +92,7 @@ class PublishingApp extends React.Component {
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
-          {personNamesJSX}
+          {mapPersonsJSX}
       </div>
     );
   }
