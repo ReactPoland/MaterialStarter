@@ -34,26 +34,57 @@ class PublishingApp extends React.Component {
           "articleContent" : "Sky is the limit, the content goes here."
       }
     ];
+    let people = [
+    {
+      name: 'Shane'
+    },
+    {
+      name: 'Sally'
+    }
 
-    this.props.articleActions.articlesList(articles);
+
+    ];
+    let wantPersonNames =[];
+    people.forEach(function (person){
+      let personsNames = person.name;
+      console.log(personsNames);
+      wantPersonNames.push(personsNames);
+    });
+    console.log("for each method log ",wantPersonNames);
+ 
+
+    this.props.articleActions.articlesList(wantPersonNames);
   }
 
   render () {
-    console.info("from reducer -> ", this.props.articleReducer)
-  	let articlesJSX = [];
+    console.info("from reducer -> ", this.props.articleReducer);
+    let personNamesFromReducer = this.props.articleReducer;
+
+    let personNamesJSX = (
+        <div>
+          <h2>{personNamesFromReducer[0]}</h2>
+          <h3>{personNamesFromReducer[1]}</h3>
+
+
+        </div>);
+      
+  	/*let articlesJSX = [];
   	for(let articleKey in this.props.articleReducer) {
   		let articleDetails = this.props.articleReducer[articleKey];
   		let currentArticleJSX = (
   			<div key={articleKey}>
   				<h2>{articleDetails.articleTitle}</h2>
   				<h3>{articleDetails.articleContent}</h3>
+
+
   			</div>);
-  		articlesJSX.push(currentArticleJSX);
-  	}
+  		articlesJSX.push(currentArticleJSX)
+      };*/
+  	
     return (
       <div>
-          <h1>Our publishing app</h1>
-          {articlesJSX}
+          <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
+          {personNamesJSX}
       </div>
     );
   }
