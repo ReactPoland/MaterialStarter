@@ -6,7 +6,6 @@ export default {
 	componentMarginTop: { marginTop: 20},
 	menuTopMargin: {marginTop: 40},
 	formIconsTopMargin: {marginTop: 35, marginRight: 5},
-	ageInputsStyle: {width: '80%'},
 	sexSwitchesBlock: {maxWidth: 250},
 	sexSwitchesRadioButton: { marginBottom: 16},
 	sexSwitchesButtonsMarginTop: {marginTop: 40},

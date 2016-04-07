@@ -18,7 +18,7 @@ import ClearIcon from 'material-ui/lib/svg-icons/content/clear';
 import Colors from 'material-ui/lib/styles/colors';
 
 
-export class Form extends React.Component {
+export class FirstInsuranceForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -28,8 +28,8 @@ export class Form extends React.Component {
   }
 
   render() {
-    
-    let ageInputsStyle = {...styles.ageInputsStyle};
+
+    let ageInputsStyle = {...styles.formMaxWidth};
     let formHeading = { ...styles.formHeading };
     let marginTopForty ={...styles.menuTopMargin};
     let formIconsTopMargin ={...styles.formIconsTopMargin};

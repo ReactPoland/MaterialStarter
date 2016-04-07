@@ -4,7 +4,7 @@ import {
   Icon_Flag_BG,
   Icon_Flag_US
 } from 'material-ui-country-flags';
-import { Form } from 'components/Form.js';
+import { FirstInsuranceForm } from 'components/FirstInsuranceForm.js';
 import styles from '../styles.js';
 import { bindActionCreators } from 'redux';
 import { connect  } from 'react-redux';
@@ -46,7 +46,7 @@ class SubpageView extends React.Component {
       <div style={formComponentMarginTop}>
           
       <div style={formMaxWidthAndMargins}>
-        <Form onSubmit={this._onSubmit} />
+        <FirstInsuranceForm onSubmit={this._onSubmit} />
       </div>
           
     </div>);
