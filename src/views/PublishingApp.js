@@ -16,10 +16,14 @@ const mapDispatchToProps = (dispatch) => ({
 class PublishingApp extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = { 
+
+     }
+    this._tryArrayJoin = this._tryArrayJoin.bind(this);
   }
   componentWillMount() {
-    this._fetch();
-    this._tryArraySlice();
+    /*this._fetch();*/
 
   }
   //mocked data here, normally from database
@@ -63,9 +67,13 @@ class PublishingApp extends React.Component {
 
     this.props.articleActions.articlesList(wantPersonNames);
   }
-  async _tryArraySlice() {
-    console.log("fire _tryArraySlice ");
-    /*this.props.articleActions.articlesList(wantPersonNames);*/
+  _tryArrayJoin() {
+    console.log("fire _tryArrayJoin ");
+    let mockedString = "los angeles california United States";
+    let anotherString = "beatiful city with lovely views";
+    let usaCities = ["waszyngton", "dallas", "denver", "honolulu"];
+    console.log(usaCities.join());
+    this.props.articleActions.joinArray(usaCities.join(" "));
   }
 
   render () {
@@ -81,6 +89,10 @@ class PublishingApp extends React.Component {
         </div>);
       mapPersonsJSX.push(currentArticleJSX)
       };
+
+      let citiesArray = this.props.articleReducer;
+      let citiesArrayConverted = JSON.stringify(citiesArray);
+      console.log(citiesArrayConverted);
    
   	/*let articlesJSX = [];
   	for(let articleKey in this.props.articleReducer) {
@@ -98,7 +110,9 @@ class PublishingApp extends React.Component {
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
-          {mapPersonsJSX}
+          
+          <h2 onClick={this._tryArrayJoin} className="row center-lg center-md center-sm center-xs">Array Join Show</h2>
+          {citiesArrayConverted}
       </div>
     );
   }
