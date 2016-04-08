@@ -68,39 +68,36 @@ class PublishingApp extends React.Component {
     this.props.articleActions.articlesList(wantPersonNames);
   }
   _tryArrayJoin() {
-    console.log("fire _tryArrayJoin ");
-    let mockedString = "los angeles california United States";
-    let anotherString = "beatiful city with lovely views";
-    let usaCities = ["waszyngton", "dallas", "denver", "honolulu"];
-    console.log(usaCities.join(" "));
-    let joinedCities = usaCities.join("\n");
+
+    let usaCities2 = ["waszyngton", "dallas", "denver", "honolulu"];
+    let usaCities22 = usaCities2.join(" ");
+
     let inputValuesFromReducer = this.props.formDataReducer;
     console.info(inputValuesFromReducer);
-    this.props.articleActions.joinArray(joinedCities);
-
-
-
-    function toTitleCase(str)
-      {
-        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-      }
-  }
-
-  render () {
-    console.info("from reducer -> ", this.props.articleReducer);
-    let personNamesFromReducer = this.props.articleReducer;
-    let citiesArray = String(this.props.articleReducer);
-    let citiesArrayToUppercase = citiesArray.split(' ').map( character => character.charAt(0)
+    
+   
+    let citiesArrayToUppercase = usaCities22.split(' ').map( character => character.charAt(0)
       .toUpperCase() + character.slice(1))
       .join(' ');
       console.info(citiesArrayToUppercase);
+
+      this.props.articleActions.joinArray(citiesArrayToUppercase);
+
+  }
+
+   
+
+  render () {
+    console.info("from reducer -> (at first reducer sends {} it shows error when trying to show it on the view)", this.props.articleReducer);
+
+    let personNamesFromReducer = this.props.articleReducer;
 
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
           
           <h2 onClick={this._tryArrayJoin} className="row center-lg center-md center-sm center-xs">Array Join Show</h2>
-          {citiesArray}
+          {personNamesFromReducer}
       </div>
     );
   }
@@ -108,7 +105,11 @@ class PublishingApp extends React.Component {
 
 export default connect(mapStateToProps, mapDispatchToProps)(PublishingApp);
 
-
+ function toTitleCase(str)
+      {
+        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+      };
+  
 
  /* let mapPersonsJSX = [];
     for(let personKey in personNamesFromReducer) {
@@ -159,3 +160,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(PublishingApp);
         }
       };
       myFunction();*/
+
+      
