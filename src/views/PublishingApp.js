@@ -33,23 +33,41 @@ class PublishingApp extends React.Component {
 
   
   _forEachLesson(stocks) {
+    let symbols = [];
+    let prices = [];
+    let volumes = [];
 
-    console.info(stocks);
+      stocks.map(function(stock) {
+        symbols.push(stock.symbol);
+        prices.push(stock.price);
+        volumes.push(stock.volume);
+      });
+      
 
+    let combinedVaribales =  [symbols, prices, volumes];
+    this.props.articleActions.joinArray(combinedVaribales);
   }
 
    
 
   render () {
-    console.info("from reducer -> (at first reducer sends {} it shows error when trying to show it on the view)", this.props.articleReducer);
-    let stocks = ["PKK", "JPG"];
-    let personNamesFromReducer = this.props.articleReducer;
+    console.info("from reducer -> ", this.props.articleReducer);
+    let stocks =  [
+      { symbol: "XFX", price: 240.22, volume: 23432 },
+      { symbol: "TNZ", price: 332.19, volume: 234 },
+      { symbol: "JXJ", price: 120.22, volume: 5323 },
+    ];
+
+    let symbolsToMapJSX = this.props.articleReducer;
+    /*let symbolsToMap = this.props.articleReducer.map( (item, index) => {
+      return <div key={index} >{item}</div>
+    });*/
 
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
           <h2 onClick={this._forEachLesson.bind(null, stocks)} className="row center-lg center-md center-sm center-xs">ForEach Lesson</h2>
-          {personNamesFromReducer}
+          {symbolsToMapJSX}
       </div>
     );
   }
@@ -61,8 +79,34 @@ export default connect(mapStateToProps, mapDispatchToProps)(PublishingApp);
       {
         return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
       };
+// "DOUBLE MAP - MAPPING NESTED ARRAYS"
+  /*var calendarJSX = calendarDaysArray.map(function(dayItem, index){
 
+            var currentDate = dayItem.date;
+           
+                  var hoursJSX = dayItem.hours.map(function(hourItem, index2) {
 
+                        let currentHour = hourItem.hour;
+
+                        let hoursMinutes = hourItem.minutes;
+
+                          let minutesMapped = hoursMinutes.map(function(minutesItem, index3){
+
+                              let minutesJSX = minutesItem;
+
+                              return <div>{minutesJSX}<br/></div>;
+
+                          });
+                        return <div>{currentHour} {minutesMapped}</div>;
+                    });
+                  
+              return (
+                <div>
+                  <div style={{marginLeft:"200px"}}>{currentDate} </div>
+                  <div >{hoursJSX}</div>
+                </div>
+              )
+          });*/
 
 
       /*_tryArrayJoin() {
