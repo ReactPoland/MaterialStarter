@@ -1,4 +1,4 @@
-const articleFromReducer = (state = {}, action) => {
+const articleFromReducer = (state = "", action) => {
 	switch (action.type) {
 		case 'RETURN_ALL_ARTICLES':
 			return Object.assign({}, state);
@@ -6,6 +6,8 @@ const articleFromReducer = (state = {}, action) => {
 			let articlesList = action.payload.response;
 			return Object.assign({}, articlesList);
 		case 'JOIN_ARRAY_DATA':
+
+			
 			let arrayElements = action.payload.data;
 
 			console.info(arrayElements);
