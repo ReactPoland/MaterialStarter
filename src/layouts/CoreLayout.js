@@ -3,11 +3,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import API from 'utils/API';
 import { Link } from 'react-router';
-
+import { Paper, FlatButton, AppBar } from 'material-ui';
 import LeftNav from 'material-ui/lib/left-nav';
-import AppBar from 'material-ui/lib/app-bar';
 import RaisedButton from 'material-ui/lib/raised-button';
 import Reorder from 'material-ui/lib/svg-icons/action/reorder';
+import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 
 const mapStateToProps = (state) => ({
   ...state
@@ -39,6 +39,18 @@ class CoreLayout extends React.Component {
           style={{width:50, height:50}}
           onTouchTap={this.handleToggle}
         />
+        <Link to='/'>
+            <FlatButton
+              backgroundColor="#ffffff"
+              label="Home"
+              icon={<Accessability />} />
+        </Link>
+        <Link to='/form'>
+            <FlatButton
+              backgroundColor="#ffffff"
+              label="Form"
+              icon={<Accessability />} />
+        </Link>
         </LeftNav>
         <div>
           {this.props.children}

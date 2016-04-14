@@ -1,6 +1,6 @@
 import React from 'react';
 import RaisedButton from 'material-ui/lib/raised-button';
-import styles from '../styles.js';
+import styles from '../../styles.js';
 
 
 export default class ResetButton extends React.Component {

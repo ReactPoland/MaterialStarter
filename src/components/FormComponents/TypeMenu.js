@@ -1,7 +1,7 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/lib/DropDownMenu';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import styles from '../styles.js';
+import styles from '../../styles.js';
 
 export default class TypeDropdownMenu extends React.Component {
 

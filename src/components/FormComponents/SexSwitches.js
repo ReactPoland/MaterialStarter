@@ -1,7 +1,7 @@
 import React from 'react';
 import RadioButton from 'material-ui/lib/radio-button';
 import RadioButtonGroup from 'material-ui/lib/radio-button-group';
-import styles from '../styles.js';
+import styles from '../../styles.js';
 
 
 export default class RadioButtonExampleSimple extends React.Component {

@@ -9,7 +9,7 @@ import ProvinceDropdownMenu from './ProvinceDropdownMenu.js';
 import SexSwitches from './SexSwitches.js';
 import CheckBox from './Checkbox.js';
 import ResetButton from './ResetButton.js';
-import styles from '../styles.js';
+import styles from '../../styles.js';
 import AccountBox from 'material-ui/lib/svg-icons/action/account-box';
 import Info from 'material-ui/lib/svg-icons/action/info';
 import Hourglass from 'material-ui/lib/svg-icons/action/hourglass-empty';

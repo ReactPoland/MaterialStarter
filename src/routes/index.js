@@ -10,7 +10,7 @@ import FormDataView 				from 'views/ViewFormData';
 export default (
   <Route component={CoreLayout} path='/'>
     <IndexRoute component={InsuranceHomeView} name='home' />
-    <Route component={SubpageView}  path='/starter' name='starter' />
+    <Route component={SubpageView}  path='/form' name='form' />
     <Route component={FormDataView}  path='/data-view' name='data-view' />
   </Route>
 );
