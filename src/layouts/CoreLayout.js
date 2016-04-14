@@ -4,15 +4,10 @@ import { connect } from 'react-redux';
 import API from 'utils/API';
 import { Link } from 'react-router';
 
-import { Paper, FlatButton, AppBar } from 'material-ui';
-
-import Colors from 'material-ui/lib/styles/colors';
-import AlertWarning from 'material-ui/lib/svg-icons/alert/warning';
-
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Accessability from 'material-ui/lib/svg-icons/action/account-box';
-import Autorenew from 'material-ui/lib/svg-icons/action/autorenew';
-import Description from 'material-ui/lib/svg-icons/action/description';
+import LeftNav from 'material-ui/lib/left-nav';
+import AppBar from 'material-ui/lib/app-bar';
+import RaisedButton from 'material-ui/lib/raised-button';
+import Reorder from 'material-ui/lib/svg-icons/action/reorder';
 
 const mapStateToProps = (state) => ({
   ...state
@@ -25,47 +20,26 @@ const mapDispatchToProps = (dispatch) => ({
 class CoreLayout extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {open: false};
 
+    this.handleToggle = this.handleToggle.bind(this);
   }
+  handleToggle = () => this.setState({open: !this.state.open});
 
   render () {
 
     return (
       <div >
-        <AppBar
-          title={
-            <h1 style={{display: 'flex', paddingLeft: 30, fontSize: 25, lineHeight: 2}}>
-              <Link to='/'style={{textDecoration: "underline", color: "white", fontSize: 22}}>Material UI starter</Link>
-            </h1>
-          }
-          iconElementLeft={<span />}>
-          <div   style={{marginRight: 30, marginTop: 20}}>
-          <Link to='/starter'>
-            <FlatButton
-              backgroundColor="#ffffff"
-              label="Form"
-              icon={<Accessability />} />
-          </Link>
-          </div>
-           <div  style={{marginRight: 30, marginTop: 20}}>
-          <Link to='/data-view'>
-            <FlatButton
-              backgroundColor="#ffffff"
-              label="Data View"
-              icon={<Autorenew />} />
-          </Link>
-          </div>
-          
-          <div style={{marginRight: 30, marginTop: 20}}>
-          <Link to='/publishing'>
-            <FlatButton
-              backgroundColor="#ffffff"
-              second={true}
-              label="Articles"
-              icon={<Description />} />
-          </Link>
-          </div>
-        </AppBar>
+        <Reorder
+          style={{width:50, height:50}}
+          onTouchTap={this.handleToggle}
+        />
+        <LeftNav width={150} openRight={false} open={this.state.open} >
+          <Reorder
+          style={{width:50, height:50}}
+          onTouchTap={this.handleToggle}
+        />
+        </LeftNav>
         <div>
           {this.props.children}
         </div>
@@ -76,3 +50,5 @@ class CoreLayout extends React.Component {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoreLayout);
+
+
