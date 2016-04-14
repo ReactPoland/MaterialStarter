@@ -11,11 +11,5 @@ export default {
       type: ARTICLES_LIST_ADD,
       payload: { response: response }
     }
-  },
-  joinArray: (data) => {
-   return {
-     type: JOIN_ARRAY_DATA,
-     payload: { data: data }
-   }
- }
+  }
 }
