@@ -47,6 +47,12 @@ class PublishingApp extends React.Component {
     let combinedVaribales =  [symbols, prices, volumes];
     this.props.articleActions.joinArray(combinedVaribales);
   }
+  addTodo() {
+
+  }
+  toggleTodo() {
+
+  }
 
    
 
@@ -58,22 +64,31 @@ class PublishingApp extends React.Component {
       { symbol: "JXJ", price: 120.22, volume: 5323 },
     ];
 
-    let symbolsToMapJSX = this.props.articleReducer;
-    /*let symbolsToMap = this.props.articleReducer.map( (item, index) => {
-      return <div key={index} >{item}</div>
-    });*/
-
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
           <h2 onClick={this._forEachLesson.bind(null, stocks)} className="row center-lg center-md center-sm center-xs">ForEach Lesson</h2>
-          {symbolsToMapJSX}
+          {"symbolsToMapJSX"}
+          <div>
+
+
+          </div>
       </div>
     );
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PublishingApp);
+
+
+
+
+
+
+
+
+
+
 
  function toTitleCase(str)
       {
