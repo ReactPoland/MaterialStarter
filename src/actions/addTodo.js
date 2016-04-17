@@ -3,13 +3,18 @@ import {
  ADD_TODO
 } from '../constants/formConstantsList.js';
 
+
+
+
 export default {
- addTodo: (payload) => {
- 	let nextTodoId = 0;
+ addTodo: (response) => {
+ 	console.info( response);
+ 	let nextTodoId = response.id;
+ 	
    return {
      type: 'ADD_TODO',
      payload: { 
-     	text: 'Test',
+     	text: response.text,
      	id: nextTodoId++
      }
    }

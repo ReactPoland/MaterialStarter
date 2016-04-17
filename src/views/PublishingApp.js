@@ -26,26 +26,28 @@ class PublishingApp extends React.Component {
     /*this._tryArrayJoin = this._tryArrayJoin.bind(this);*/
     this._addTodo = this._addTodo.bind(this);
   }
-    componentWillMount() {
+   /* componentWillMount() {
     this._addTodo();
-  }
+  }*/
 
-  async _addTodo() {
+  _addTodo() {
     let addTodoData = {
+        text: "action.text",
+        id: 1
       };
     this.props.todoActions.addTodo(addTodoData);
   }
   
   render () {
-    console.info("from reducer -> ", this.props.todoReducer);
     let todoJSX = this.props.todoReducer;
-    let todoJSXArray =[];
+    console.info("item from reducer",todoJSX);
+    /*let todoJSXArray =[];
     todoJSXArray.push(todoJSX);
-    console.info("item form reducer",todoJSX);
-    console.info("todoJSXArray has: ", todoJSXArray);
-   let todoMapJSX = todoJSXArray.map(function( item, index) {
+    
+    console.info("todoJSXArray has: ", todoJSXArray);*/
+   /*let todoMapJSX = todoJSX.map(function( item, index) {
     return <li key={index}>{item.customText}</li>
-   });
+   });*/
 
     return (
       <div>
@@ -54,7 +56,7 @@ class PublishingApp extends React.Component {
           
           <div>
             <ul>
-            {todoMapJSX}
+            {"todoJSX"}
             </ul>
           </div>
       </div>

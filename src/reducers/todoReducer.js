@@ -1,16 +1,18 @@
-const todoReducerItem = (state = "init state", action) => {
+const todoReducerItem = (state = [], action) => {
 	switch (action.type) {
 		
 		case 'ADD_TODO':
-		
-			let addTodoData = {
-				id: action.id,
-				text: action.text,
+			
+			let addTodoItem = {
+				id: action.payload.id,
+				text: action.payload.text,
 				customText: "custom text",
 				completed: false
 			};
+			/*let todoItems =[];
+			todoItems.push(addTodoItem);*/
 
-			return Object.assign({}, addTodoData);
+			return Object.assign({}, addTodoItem);
 		case 'TOGGLE_TODO':
 		if( state.id !== action.id ) {
 			return state;
