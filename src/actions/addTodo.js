@@ -4,12 +4,12 @@ import {
 } from '../constants/formConstantsList.js';
 
 
-
+let nextTodoId = 0;
 
 export default {
  addTodo: (response) => {
  	console.info( response);
- 	let nextTodoId = response.id;
+ 	
  	
    return {
      type: 'ADD_TODO',

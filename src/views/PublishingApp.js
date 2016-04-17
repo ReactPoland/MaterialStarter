@@ -32,8 +32,7 @@ class PublishingApp extends React.Component {
 
   _addTodo() {
     let addTodoData = {
-        text: "action.text",
-        id: 1
+        text: "action.text"
       };
     this.props.todoActions.addTodo(addTodoData);
   }
