@@ -4,13 +4,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import articleActions from 'actions/article.js';
+import  todoActions from 'actions/addTodo';
 
 const mapStateToProps = (state) => ({
 	...state
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  articleActions: bindActionCreators(articleActions, dispatch)
+
+  todoActions: bindActionCreators(todoActions, dispatch)
 });
 
 
@@ -22,56 +24,38 @@ class PublishingApp extends React.Component {
      
      }
     /*this._tryArrayJoin = this._tryArrayJoin.bind(this);*/
-    this._forEachLesson = this._forEachLesson.bind(this);
+    this._addTodo = this._addTodo.bind(this);
   }
-  componentWillMount() {
-   
+    componentWillMount() {
+    this._addTodo();
+  }
 
+  async _addTodo() {
+    let addTodoData = {
+      };
+    this.props.todoActions.addTodo(addTodoData);
   }
   
-  //mocked data here, normally from database
-
-  
-  _forEachLesson(stocks) {
-    let symbols = [];
-    let prices = [];
-    let volumes = [];
-
-      stocks.map(function(stock) {
-        symbols.push(stock.symbol);
-        prices.push(stock.price);
-        volumes.push(stock.volume);
-      });
-      
-
-    let combinedVaribales =  [symbols, prices, volumes];
-    this.props.articleActions.joinArray(combinedVaribales);
-  }
-  addTodo() {
-
-  }
-  toggleTodo() {
-
-  }
-
-   
-
   render () {
-    console.info("from reducer -> ", this.props.articleReducer);
-    let stocks =  [
-      { symbol: "XFX", price: 240.22, volume: 23432 },
-      { symbol: "TNZ", price: 332.19, volume: 234 },
-      { symbol: "JXJ", price: 120.22, volume: 5323 },
-    ];
+    console.info("from reducer -> ", this.props.todoReducer);
+    let todoJSX = this.props.todoReducer;
+    let todoJSXArray =[];
+    todoJSXArray.push(todoJSX);
+    console.info("item form reducer",todoJSX);
+    console.info("todoJSXArray has: ", todoJSXArray);
+   let todoMapJSX = todoJSXArray.map(function( item, index) {
+    return <li key={index}>{item.customText}</li>
+   });
 
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
-          <h2 onClick={this._forEachLesson.bind(null, stocks)} className="row center-lg center-md center-sm center-xs">ForEach Lesson</h2>
-          {"symbolsToMapJSX"}
+          <button onClick={this._addTodo}>Add Todo</button>
+          
           <div>
-
-
+            <ul>
+            {todoMapJSX}
+            </ul>
           </div>
       </div>
     );
@@ -81,7 +65,9 @@ class PublishingApp extends React.Component {
 export default connect(mapStateToProps, mapDispatchToProps)(PublishingApp);
 
 
-
+/* var selectListRelationshipTasksJSX = stateRelationshipTasksToMap.map(function ( item, index ) {
+      return <option key={index} value={item.text}>{item.text}</option>
+    });*/
 
 
 

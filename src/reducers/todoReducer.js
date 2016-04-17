@@ -1,4 +1,4 @@
-const todoReducerItem = (state = {}, action) => {
+const todoReducerItem = (state = "init state", action) => {
 	switch (action.type) {
 		
 		case 'ADD_TODO':
@@ -6,6 +6,7 @@ const todoReducerItem = (state = {}, action) => {
 			let addTodoData = {
 				id: action.id,
 				text: action.text,
+				customText: "custom text",
 				completed: false
 			};
 
