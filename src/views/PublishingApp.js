@@ -40,13 +40,9 @@ class PublishingApp extends React.Component {
   render () {
     let todoJSX = this.props.todoReducer;
     console.info("item from reducer",todoJSX);
-    /*let todoJSXArray =[];
-    todoJSXArray.push(todoJSX);
-    
-    console.info("todoJSXArray has: ", todoJSXArray);*/
-   /*let todoMapJSX = todoJSX.map(function( item, index) {
+   let todoMapJSX = todoJSX.map(function( item, index) {
     return <li key={index}>{item.customText}</li>
-   });*/
+   });
 
     return (
       <div>
@@ -55,7 +51,7 @@ class PublishingApp extends React.Component {
           
           <div>
             <ul>
-            {"todoJSX"}
+              {todoMapJSX}
             </ul>
           </div>
       </div>

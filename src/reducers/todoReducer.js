@@ -1,4 +1,6 @@
-const todoReducerItem = (state = [], action) => {
+let todoItems =[];
+
+const todoReducerItem = (state = "initial state", action) => {
 	switch (action.type) {
 		
 		case 'ADD_TODO':
@@ -9,10 +11,11 @@ const todoReducerItem = (state = [], action) => {
 				customText: "custom text",
 				completed: false
 			};
-			/*let todoItems =[];
-			todoItems.push(addTodoItem);*/
+			
+			todoItems.push(addTodoItem);
+			console.info("array in reduceer---> ", todoItems);
 
-			return Object.assign({}, addTodoItem);
+			return Object.assign([], addTodoItem);
 		case 'TOGGLE_TODO':
 		if( state.id !== action.id ) {
 			return state;
