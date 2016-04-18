@@ -12,6 +12,10 @@ import AlertWarning from 'material-ui/lib/svg-icons/alert/warning';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 import Autorenew from 'material-ui/lib/svg-icons/action/autorenew';
+import ToolbarComponent from './ToolbarComponent.js'
+
+let closeAction = function(){alert('close!');}
+let okAction = function(){alert('ok!');}
 
 const mapStateToProps = (state) => ({
   ...state
@@ -58,6 +62,7 @@ class CoreLayout extends React.Component {
           </div>
         </AppBar>
         <div>
+          <ToolbarComponent message="Lorem ipsum" okClick={okAction} closeClick={closeAction} />
           {this.props.children}
         </div>
       </div>
