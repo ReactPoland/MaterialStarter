@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch) => ({
   todoActions: bindActionCreators(todoActions, dispatch)
 });
 
+let todoItems =[];
 
 class PublishingApp extends React.Component {
   constructor(props) {
@@ -38,9 +39,14 @@ class PublishingApp extends React.Component {
   }
   
   render () {
+    
     let todoJSX = this.props.todoReducer;
     console.info("item from reducer",todoJSX);
-   let todoMapJSX = todoJSX.map(function( item, index) {
+
+    todoItems.push(todoJSX);
+    console.info("array in render---> ", todoItems);
+
+   let todoMapJSX = todoItems.map(function( item, index) {
     return <li key={index}>{item.customText}</li>
    });
 
