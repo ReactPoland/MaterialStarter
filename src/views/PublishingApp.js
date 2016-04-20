@@ -24,8 +24,9 @@ class PublishingApp extends React.Component {
     this.state = { 
      
      }
-    /*this._tryArrayJoin = this._tryArrayJoin.bind(this);*/
+   
     this._addTodo = this._addTodo.bind(this);
+    this._toggleTodo = this._toggleTodo.bind(this);
   }
    /* componentWillMount() {
     this._addTodo();
@@ -37,9 +38,12 @@ class PublishingApp extends React.Component {
       };
     this.props.todoActions.addTodo(addTodoData);
   }
+  _toggleTodo() {
+
+  }
   
   render () {
-    
+    let showId = 0;
     let todoJSX = this.props.todoReducer;
     console.info("item from reducer",todoJSX);
 
@@ -47,7 +51,8 @@ class PublishingApp extends React.Component {
     console.info("array in render---> ", todoItems);
 
    let todoMapJSX = todoItems.map(function( item, index) {
-    return <li key={index}>{item.customText}</li>
+
+    return <li key={index}>{item.customText + showId++}</li>
    });
 
     return (
