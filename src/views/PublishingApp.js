@@ -39,7 +39,7 @@ class PublishingApp extends React.Component {
     this.props.todoActions.addTodo(addTodoData);
   }
   _toggleTodo() {
-
+    console.log("toggle todo!");
   }
   
   render () {
@@ -50,9 +50,9 @@ class PublishingApp extends React.Component {
     todoItems.push(todoJSX);
     console.info("array in render---> ", todoItems);
 
-   let todoMapJSX = todoItems.map(function( item, index) {
+   let todoMapJSX = todoItems.map( ( item, index) => {
 
-    return <li key={index}>{item.customText + showId++}</li>
+    return <li onClick={this._toggleTodo} key={index}>{item.customText + showId++}</li>
    });
 
     return (
