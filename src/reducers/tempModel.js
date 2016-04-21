@@ -23,7 +23,30 @@ at the start data need to be populated , before there will be possibility to ent
           sex: "female"
         }
       ],
-      quotesId: ["firstClient123456"]
+      quotesId: ["firstClient123456"],
+      underwritingOptions: 
+  [
+  	{
+		underwritingId: 1,
+		underwritingName:"Super Preferred"
+	},
+	{
+		underwritingId: 2,
+		underwritingName: "Preferred"
+	},
+	{
+		underwritingId: 3,
+		underwritingName: "Standard Plus"
+	},
+	{
+		underwritingId: 4,
+		underwritingName: "Standard"
+	}
+  ],
+  clientAgeData: { 
+	  	actualAge: 30, 
+	  	nearestAge: 31
+  	}
     },
     { 
       id: "2",
@@ -34,7 +57,30 @@ at the start data need to be populated , before there will be possibility to ent
           sex: "male"
         }
       ],
-      quotesId: ["secondClient123456"]
+      quotesId: ["secondClient123456"],
+      underwritingOptions: 
+  [
+  	{
+		underwritingId: 1,
+		underwritingName:"Super Preferred"
+	},
+	{
+		underwritingId: 2,
+		underwritingName: "Preferred"
+	},
+	{
+		underwritingId: 3,
+		underwritingName: "Standard Plus"
+	},
+	{
+		underwritingId: 4,
+		underwritingName: "Standard"
+	}
+  ],
+  clientAgeData: { 
+	  	actualAge: 50, 
+	  	nearestAge: 51
+  	}
       }
   ],
   licenseInfo: {
@@ -63,28 +109,45 @@ at the start data need to be populated , before there will be possibility to ent
       ]
     }
   },
-  policyTypeOptions: 
+  
+  policyOptions: 
   [
   	{
 		policyId: 1,
-		policyName:"Super Preferred"
+		policyName:"Term 10"
 	},
 	{
 		policyId: 2,
-		policyName: "Preferred"
+		policyName: "Term 20"
 	},
 	{
 		policyId: 3,
-		policyName: "Standard Plus"
+		policyName: "Term 30"
 	},
 	{
 		policyId: 4,
-		policyName: "Standard"
+		policyName: "Term 40"
 	}
   ],
-  firstClientAgeData: { 
-	  	actualAge: 30, 
-	  	nearestAge: 31
-  	}
+  
+  	provinceList: 
+  	[
+	  	{
+			provinceId: 1,
+			provinceName:"Ontario"
+		},
+		{
+			provinceId: 2,
+			provinceName: "Quebec"
+		},
+		{
+			provinceId: 3,
+			provinceName: "New Scotland"
+		},
+		{
+			provinceId: 4,
+			provinceName: "Alberta"
+		}
+	]
 
 }
