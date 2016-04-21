@@ -58,6 +58,12 @@ class CoreLayout extends React.Component {
               label="Form"
               icon={<Accessability />} />
         </Link>
+        <Link to='/clients'>
+            <FlatButton
+              backgroundColor="#ffffff"
+              label="Clients"
+              icon={<Accessability />} />
+        </Link>
         </LeftNav>
         <div >
           {this.props.children}
