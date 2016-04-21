@@ -62,6 +62,29 @@ at the start data need to be populated , before there will be possibility to ent
         }
       ]
     }
-  }
+  },
+  policyTypeOptions: 
+  [
+  	{
+		policyId: 1,
+		policyName:"Super Preferred"
+	},
+	{
+		policyId: 2,
+		policyName: "Preferred"
+	},
+	{
+		policyId: 3,
+		policyName: "Standard Plus"
+	},
+	{
+		policyId: 4,
+		policyName: "Standard"
+	}
+  ],
+  firstClientAgeData: { 
+	  	actualAge: 30, 
+	  	nearestAge: 31
+  	}
 
 }
