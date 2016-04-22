@@ -49,7 +49,7 @@ var styles = {
     background: '#ffffff',
     padding: '0 0 0 0',
     fontSize: '1.15em',
-    boxShadow: "10px 10px 5px #888888"
+    boxShadow: "10px 10px 5px #888888",
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -62,6 +62,7 @@ var styles = {
     background: 'ffffff'
   }
 }
+/*Michal: i added in react-burger-menu to lib/baseStyles property top: 5px to fix jumping, moved down sidebar*/
 
 
 class CoreLayout extends React.Component {
