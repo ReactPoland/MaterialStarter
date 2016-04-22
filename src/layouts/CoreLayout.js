@@ -85,9 +85,9 @@ class CoreLayout extends React.Component {
         pageWrapId={ "page-wrap" }
         outerContainerId={ "outer-container" }>
           <List>
-            <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
-            <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
-            <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
+            <Link  to='/'><ListItem primaryText="Home" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/form'><ListItem primaryText="Form" leftIcon={<ActionGrade />} /></Link>
+            <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<ContentSend />} /></Link>
             <ListItem primaryText="Drafts" leftIcon={<ContentDrafts />} />
             <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
           </List>
@@ -109,24 +109,3 @@ class CoreLayout extends React.Component {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoreLayout);
-
-/*<Link  to='/'>
-            <FlatButton style={{width: '200px'}}
-            backgroundColor="#ffffff"
-            label="Home"
-            icon={<Accessability />} />
-            </Link>
-       
-          <Link  to='/form'>
-          <FlatButton
-          backgroundColor="#ffffff"
-          label="Form"
-          icon={<Accessability />} />
-          </Link>
-    
-        <Link  to='/clients'>
-          <FlatButton
-          backgroundColor="#ffffff"
-          label="Clients"
-          icon={<Accessability />} />
-        </Link>*/
