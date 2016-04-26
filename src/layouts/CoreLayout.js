@@ -81,22 +81,19 @@ class CoreLayout extends React.Component {
         styles={ styles }
         noOverlay 
         isOpen 
-        width={ 200 } 
+        width={ 250 } 
         pageWrapId={ "page-wrap" }
         outerContainerId={ "outer-container" }>
           <List>
-            <Link  to='/'><ListItem primaryText="Home" leftIcon={<ContentInbox />} /></Link>
-            <Link  to='/form'><ListItem primaryText="Form" leftIcon={<ActionGrade />} /></Link>
-            <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<ContentSend />} /></Link>
-            <ListItem primaryText="Drafts" leftIcon={<ContentDrafts />} />
-            <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
-          </List>
-          <Divider />
-          <List>
-            <ListItem primaryText="All mail" rightIcon={<ActionInfo />} />
-            <ListItem primaryText="Trash" rightIcon={<ActionInfo />} />
-            <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
-            <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
+            <Link  to='/'><ListItem primaryText="LIFEADVISORPRO (TM)" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<ActionGrade />} /></Link>
+            <Link  to='/life-insurance'><ListItem primaryText="Life Insurance" leftIcon={<ContentSend />} /></Link>
+            <Link  to='/critical-illness'><ListItem primaryText="Crtitical Illness" leftIcon={<ContentDrafts />} /></Link>
+            <Link  to='/no-medical-exam'><ListItem primaryText="No Medical Exam" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/disability'><ListItem primaryText="Disability" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/needs-analysis'><ListItem primaryText="Needs Analysis" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/news'><ListItem primaryText="News" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/settings'><ListItem primaryText="Settings" leftIcon={<ContentInbox />} /></Link>
           </List>
       </Menu>
         <div id="page-wrap">

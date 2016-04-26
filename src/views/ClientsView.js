@@ -88,8 +88,8 @@ class ClientsComponent extends React.Component {
 
     return (
       <div>
-          <h1>Our publishing app</h1>
-          {"this.props.clientsDataReducer"}
+          <h1 className="row center-lg center-md center-sm center-xs">Our publishing app</h1>
+          <div className="row center-lg center-md center-sm center-xs">{"this.props.clientsDataReducer"}</div>
       </div>
     );
   }
