@@ -45,14 +45,14 @@ var styles = {
     width: '24px'
   },
   bmCross: {
-    background: '#bdc3c7',
-    cursor: 'pointer'
+    background: '#bdc3c7'
+    
   },
   bmMenu: {
     background: '#ffffff',
     padding: '0 0 0 0',
     fontSize: '1.15em',
-    boxShadow: "10px 10px 5px #888888",
+    boxShadow: "10px 10px 5px #888888"
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -63,9 +63,11 @@ var styles = {
   },
   bmOverlay: {
     background: 'ffffff'
+  },
+  bmMenuWrap: {
+    top: '0px'
   }
 }
-/*Michal: i added in react-burger-menu to lib/baseStyles property top: 5px to fix jumping, moved down sidebar*/
 
 
 class CoreLayout extends React.Component {
@@ -81,14 +83,14 @@ class CoreLayout extends React.Component {
     return (
       <div id="outer-container">
       <Menu 
-        styles={ styles }
+        styles={ styles}
         noOverlay 
         isOpen 
         width={ 250 } 
         pageWrapId={ "page-wrap" }
         outerContainerId={ "outer-container" }>
           <List>
-            <Link  to='/'><ListItem primaryText="LIFEADVISORPRO (TM)" leftIcon={<ContentInbox />} /></Link>
+            <Link  to='/'><ListItem  primaryText="LIFEADVISORPRO (TM)" leftIcon={<ContentInbox />} /></Link>
             <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<ActionGrade />} /></Link>
             <Link  to='/life-insurance'><ListItem primaryText="Life Insurance" leftIcon={<ContentSend />} /></Link>
             <Link  to='/critical-illness'><ListItem primaryText="Crtitical Illness" leftIcon={<ContentDrafts />} /></Link>
