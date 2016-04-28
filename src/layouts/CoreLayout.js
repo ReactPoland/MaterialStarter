@@ -9,7 +9,7 @@ import MenuItem from 'material-ui/lib/menus/menu-item';
 import Accessability from 'material-ui/lib/svg-icons/action/account-box';
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
-import ActionGrade from 'material-ui/lib/svg-icons/action/grade';
+import AccountBox from 'material-ui/lib/svg-icons/action/account-box';
 import ActionInfo from 'material-ui/lib/svg-icons/action/info';
 import ContentInbox from 'material-ui/lib/svg-icons/content/inbox';
 import ContentDrafts from 'material-ui/lib/svg-icons/content/drafts';
@@ -17,7 +17,7 @@ import ContentSend from 'material-ui/lib/svg-icons/content/send';
 import Description from 'material-ui/lib/svg-icons/action/description';
 import Explore from 'material-ui/lib/svg-icons/action/explore';
 import Favorite from 'material-ui/lib/svg-icons/action/favorite';
-import FavoriteBorder from 'material-ui/lib/svg-icons/action/favorite-border';
+import Build from 'material-ui/lib/svg-icons/action/build';
 
 var Menu = require('react-burger-menu').push;
 
@@ -91,14 +91,14 @@ class CoreLayout extends React.Component {
         outerContainerId={ "outer-container" }>
           <List>
             <Link  to='/'><ListItem  primaryText="LIFEADVISORPRO (TM)" leftIcon={<ContentInbox />} /></Link>
-            <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<ActionGrade />} /></Link>
+            <Link  to='/clients'><ListItem primaryText="Clients" leftIcon={<AccountBox />} /></Link>
             <Link  to='/life-insurance'><ListItem primaryText="Life Insurance" leftIcon={<ContentSend />} /></Link>
             <Link  to='/critical-illness'><ListItem primaryText="Crtitical Illness" leftIcon={<ContentDrafts />} /></Link>
             <Link  to='/no-medical-exam'><ListItem primaryText="No Medical Exam" leftIcon={<ContentInbox />} /></Link>
             <Link  to='/disability'><ListItem primaryText="Disability" leftIcon={<Description />} /></Link>
             <Link  to='/needs-analysis'><ListItem primaryText="Needs Analysis" leftIcon={<Explore />} /></Link>
             <Link  to='/news'><ListItem primaryText="News" leftIcon={<Favorite />} /></Link>
-            <Link  to='/settings'><ListItem primaryText="Settings" leftIcon={<FavoriteBorder />} /></Link>
+            <Link  to='/settings'><ListItem primaryText="Settings" leftIcon={<Build />} /></Link>
           </List>
       </Menu>
         <div id="page-wrap">
