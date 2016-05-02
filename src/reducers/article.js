@@ -5,14 +5,6 @@ const articleFromReducer = (state = "", action) => {
 		case 'ARTICLES_LIST_ADD':
 			let articlesList = action.payload.response;
 			return Object.assign({}, articlesList);
-		case 'JOIN_ARRAY_DATA':
-
-			
-			let arrayElements = action.payload.data;
-
-			console.info(arrayElements);
-			console.info(typeof arrayElements);
-			return arrayElements;
 		default:
 			return state;
 	}

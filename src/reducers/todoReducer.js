@@ -1,4 +1,4 @@
-const todoReducerItem = (state = [], action) => {
+const todoReducerItem = (state = "", action) => {
 	switch (action.type) {
 		
 		case 'ADD_TODO':

@@ -52,7 +52,8 @@ class PublishingApp extends React.Component {
 
    let todoMapJSX = todoItems.map( ( item, index) => {
 
-    return <li onClick={this._toggleTodo} key={index}>{item.customText + showId++}</li>
+    /*return <li onClick={this._toggleTodo} key={index}>{item.customText + showId++}</li>*/
+    return <li onClick={this._toggleTodo} key={index}>{item.customText}</li>
    });
 
     return (
