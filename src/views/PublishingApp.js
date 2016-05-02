@@ -17,6 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 let todoItems =[];
 
+
 class PublishingApp extends React.Component {
   constructor(props) {
     super(props);
@@ -33,8 +34,10 @@ class PublishingApp extends React.Component {
   }*/
 
   _addTodo() {
+    let userInput = this.refs.addTodo.value;
+    console.log("user input---- > ",userInput);
     let addTodoData = {
-        text: "action.text"
+        text: userInput
       };
     this.props.todoActions.addTodo(addTodoData);
   }
@@ -43,7 +46,6 @@ class PublishingApp extends React.Component {
   }
   
   render () {
-    let showId = 0;
     let todoJSX = this.props.todoReducer;
     console.info("item from reducer",todoJSX);
 
@@ -52,13 +54,14 @@ class PublishingApp extends React.Component {
 
    let todoMapJSX = todoItems.map( ( item, index) => {
 
-    /*return <li onClick={this._toggleTodo} key={index}>{item.customText + showId++}</li>*/
-    return <li onClick={this._toggleTodo} key={index}>{item.customText}</li>
+    return <li onClick={this._toggleTodo} key={index}>{item.text}</li>
+   
    });
 
     return (
       <div>
           <h1 className="row center-lg center-md center-sm center-xs">Our publishing app - Javascript Playground</h1>
+          <input ref="addTodo" />
           <button onClick={this._addTodo}>Add Todo</button>
           
           <div>
